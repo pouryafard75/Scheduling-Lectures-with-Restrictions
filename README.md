@@ -1,6 +1,6 @@
 # Constraint satisfaction Scheduling
 
-There are plenty of lectures and professors. Your mission in find the best scheduling plan with  the minimum amount of time to have all lectures held with supervisor and refereers. But there are some restrications in terms of choosing refeeres.
+There are plenty of lectures and professors. Your mission is to find the best scheduling plan with  the minimum amount of time to have all lectures held with supervisor and refereers. But there are some restrications in terms of choosing refeeres.
 
 The goal is to assign two referees to each lecture and try to minimize the number of time parts(each day has 4 different time parts) which is needed to have all lectures held.
 Referees <b> must </b> have an expertise in lecture's topic. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held.
@@ -53,7 +53,7 @@ Dr.Moayeri <br>
 VLSI <br>
 HE <br>
 
-In the example aforementioned, there are two different professors.  First one, Dr.Shamsfard has 2 expertise such as NLP and AI.
+In the example aforementioned, there are two different professors.  First one, Dr.Shamsfard has 2 expertise, NLP and AI.
 The next professor Dr.Moayeri has also two other expertise namely VLSI and HE.
 
 
