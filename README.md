@@ -6,7 +6,7 @@ The goal is to assign two referees to each lecture and try to minimize the amoun
 Referees <b> must </b> have an expretise in lecture's topic. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held.
 You can have multiple lectures held at the same time once you designate free related professors to the every lecture.
 Free professor means a professor which is not present at any other lectures (as supervisor or referee) at the same time.
-Related professors means a professor which has an expertise in lecture's related topics.
+Related professors means a professorn which has an expertise in lecture's related topics.
 
 Each lecture has a supervisor which is indicated in the lecture  information and has a specific topic. Also each proffessor has their expertise in a particular feild(s).
 
@@ -14,7 +14,7 @@ Each lecture has a supervisor which is indicated in the lecture  information and
 Input
 </b> </i> 
 
-You will be given 3 different files namely Lectures.txt , Subjects.txt , Teachers,txt
+You will be given 3 different files namely Lectures.txt , Subjects.txt , Teachers.txt
 
 <i> Lectures.txt </i>
 
@@ -68,3 +68,6 @@ Output
 
 When scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed.
 The excel file will be like:
+<img width="1236" alt="image" src="https://user-images.githubusercontent.com/28820932/118763572-4f950d80-b88d-11eb-94a9-b05f35a8b8dc.png">
+
+
