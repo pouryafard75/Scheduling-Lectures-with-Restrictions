@@ -1,6 +1,6 @@
 # Constraint-Based Scheduling
 
-This was a final project from the Artificial Intelligence course at Shahid Beheshti University.
+Plenty of lectures, teachers and you need to fine the minimum amount of time to have all lectures held with supervisor and refereers. But there are some restrications in terms of choosing refeeres.
 
 The goal is to assign two referees to each lecture and try to minimize the number of time parts(each day has 4 different time parts) which is needed to have all lectures held.
 Referees <b> must </b> have an expertise in lecture's topic. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held.
