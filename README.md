@@ -1,4 +1,4 @@
-# Constraint-Based Scheduling
+# Constraint satisfaction Scheduling
 
 There are plenty of lectures and professors. Your mission in find the best scheduling plan with  the minimum amount of time to have all lectures held with supervisor and refereers. But there are some restrications in terms of choosing refeeres.
 
@@ -72,4 +72,8 @@ The excel file will be like:
 <br>
 <img width="1236" alt="image" src="https://user-images.githubusercontent.com/28820932/118763572-4f950d80-b88d-11eb-94a9-b05f35a8b8dc.png">
 
+<i> <b>
+Algorithm
+</b> </i>
 
+The algorithms will create and fill a priorityqueue with teachers called possibleTeachers. The teacher with the less number of expertise will come at the first of the queue. Then we iterate through lectures. By having this approach, we designate the less accomplished professors at first and while the algorithms continues we have teachers who are more versatile.
