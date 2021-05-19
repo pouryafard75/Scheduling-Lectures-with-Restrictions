@@ -12,12 +12,27 @@ public class State {
     public ArrayList<TimePart> times;
     public String result = "";
 
+
     State() {
         times = new ArrayList<>();
         ClearRefrees();
         Fill();
         Dates = times.get(times.size() - 1).day;
         CalculateResult();
+    }
+
+    public String getAllInfo()
+    {
+        String result = "";
+        for (TimePart tp : times) {
+            for (Lecture lec : tp.lectures) {
+                result += lec.print();
+                result += lec.output();
+                result += " " + tp.day + " " + tp.part;
+                result += "\r\n";
+            }
+        }
+        return result;
     }
 
     State(ArrayList<TimePart> tp) {
