@@ -1,24 +1,24 @@
 # Constraint-Based Scheduling
 
-This was a FinalProject from Artificial Intelligence course in Shahid beheshti university.
+This was a final project from the Artificial Intelligence course at Shahid Beheshti University.
 
-The goal is to assign two referees to each lecture and try to minimize the amount of days which is needed to have all lectures held.
-Referees <b> must </b> have an expretise in lecture's topic. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held.
-You can have multiple lectures held at the same time once you designate free related professors to the every lecture.
-Free professor means a professor which is not present at any other lectures (as supervisor or referee) at the same time.
-Related professors means a professorn which has an expertise in lecture's related topics.
+The goal is to assign two referees to each lecture and try to minimize the number of time parts(each day has 4 different time parts) which is needed to have all lectures held.
+Referees <b> must </b> have an expertise in lecture's topic. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held.
+You can have multiple lectures held at the same time once you designate free related professors to every lecture.
+A free professor means a professor who is not present at any other lectures (as supervisor or referee) at the same time.
+A related professor means a professor who has expertise in lecture's related topics.
 
-Each lecture has a supervisor which is indicated in the lecture  information and has a specific topic. Also each proffessor has their expertise in a particular feild(s).
+Each lecture has a supervisor which is indicated in the lecture information and has a specific topic. Also, each professor has their expertise in a particular field(s).
 
 <i> <b>
 Input
 </b> </i> 
 
-You will be given 3 different files namely Lectures.txt , Subjects.txt , Teachers.txt
+You will be given 3 different files namely Lectures.txt, Subjects.txt , Teachers.txt
 
 <i> Lectures.txt </i>
 
-This file has information about all the lectures which should be held. For each lecture, name of the lecture, name of the associated professor, number of topics which are related to the lecture and topic's names are indicated.
+This file has information about all the lectures which should be held. For each lecture, the name of the lecture, name of the associated professor, number of topics that are related to the lecture, and topic's names are indicated.
 Example: <br>
 lec1 <br>
 Dr.Shamsfard <br>
@@ -32,8 +32,8 @@ Dr.Haghighi <br>
 SE <br>
 Net <br>
 
-The example mentioned above, has two different lectures. First lecture which is lec1, has Dr.Shamsfard as the supervisor and focuses on 3 different topics which are NLP, DIP, DM. 
-For the second lecture which is lec2 we have Dr.Haghighi as the supervisor and the lecture is related to 2 topics namely SE and Net.
+The example mentioned above has two different lectures. The first lecture which is lec1 has Dr.Shamsfard as the supervisor and focuses on 3 different topics which are NLP, DIP, DM. 
+For the second lecture which is lec2, we have Dr.Haghighi as the supervisor and the lecture is related to 2 topics namely SE and Net.
 
 <i> Subjects.txt </i>  <br>
 
@@ -53,20 +53,20 @@ Dr.Moayeri <br>
 VLSI <br>
 HE <br>
 
-In the example aforementioned, there are two different professors.  First one, Dr.Shamsfard has 2 epxertise such as NLP and AI.
+In the example aforementioned, there are two different professors.  First one, Dr.Shamsfard has 2 expertise such as NLP and AI.
 The next professor Dr.Moayeri has also two other expertise namely VLSI and HE.
 
 
-<b>Remember </b> you are not supposed to cover all related topics to a lecture by desingated referees. The puprose is to assign two referees who are proficent in one of lecture's topic.
+<b>Remember </b> you are not supposed to cover all related topics to a lecture by designated referees. The project goal is to assign two referees who are proficient in one of the lecture's topics.
 <br>
-<b> And also remember </b> lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture which is held simultaneously; The professor cant be at two different lectures at the same time.
+<b> And also remember </b> lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is held simultaneously; The professor cant be at two different lectures at the same time.
 
 
 <i> <b>
 Output
 </b> </i>
 
-When scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed.
+When the scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed.
 The excel file will be like:
 <img width="1236" alt="image" src="https://user-images.githubusercontent.com/28820932/118763572-4f950d80-b88d-11eb-94a9-b05f35a8b8dc.png">
 
