@@ -68,6 +68,7 @@ Output
 
 When the scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed.
 The excel file will be like:
+<br>
 <img width="1236" alt="image" src="https://user-images.githubusercontent.com/28820932/118763572-4f950d80-b88d-11eb-94a9-b05f35a8b8dc.png">
 
 
