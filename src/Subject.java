@@ -7,8 +7,15 @@ import java.util.Set;
  */
 public class Subject {
     public static ArrayList<Subject> list =new ArrayList<>();
-    String name;
-    Set<Teacher> teachers;
+    public Set<Teacher> teachers;
+    private String name;
+
+    //Getter for private field;
+    public String getName()
+    {
+        return name;
+    }
+
 
     public Subject(String name) {
         this.name = name;
@@ -25,8 +32,8 @@ public class Subject {
     @Override
     public String toString() {
         String ret = name+": ";
-        for (Teacher walk:teachers)
-            ret+=walk.name+" ";
+        for (Teacher t:teachers)
+            ret+=t.getName()+" ";
         return ret;
     }
 }

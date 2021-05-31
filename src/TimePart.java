@@ -4,17 +4,29 @@ import java.util.ArrayList;
  * Created by pouryafard on 1/15/2017 AD.
  */
 public class TimePart {
-    public int day;
-    public int part;
-    ArrayList<Lecture> lectures = new ArrayList<>();
+
+    private int day;
+    private int part;
+    public ArrayList<Lecture> lectures;
     static ArrayList<TimePart> list = new ArrayList<>();
+
+    //Getter for private fields
+    public int getDay()
+    {
+        return day;
+    }
+    public int getPart()
+    {
+        return part;
+    }
+    // If I want to add a getter for arraylist, the caller still can change the array, (its not immutable like int and String)
+    // Unless I clone a copy, so left it  for later commits. Moreover, I have to modify add functions too.
 
     public TimePart(int day, int part) {
         this.day = day;
         this.part = part;
         lectures = new ArrayList<>();
     }
-
     public static TimePart get(int day,int part){
         for(TimePart walk:list)
             if(walk.day == day && walk.part == part)
@@ -23,7 +35,6 @@ public class TimePart {
         list.add(ret);
         return ret;
     }
-
     public static int lastDay(){
         int max = 0;
         for(TimePart walk:list){

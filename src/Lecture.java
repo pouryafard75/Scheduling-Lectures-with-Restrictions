@@ -8,10 +8,16 @@ import java.util.Scanner;
  */
 public class Lecture {
     public static ArrayList<Lecture> list =new ArrayList<>();
-    String name;
-    Teacher supervisor;
-    ArrayList<Teacher> referees;
-    Set<Subject> subjects;
+    public Set<Subject> subjects;
+    public Teacher supervisor;
+    public ArrayList<Teacher> referees;
+
+    private String name;
+
+    //No usage, however adding a getter
+    public String getName() {
+            return name;
+    }
 
     public Lecture(String name, Teacher supervisor) {
         this.name = name;
@@ -19,14 +25,12 @@ public class Lecture {
         referees = new ArrayList<>();
         subjects = new HashSet<>();
     }
-
     public static Lecture findByName(String name){
         for(Lecture walk:list)
             if(walk.name.equals(name))
                 return walk;
         return null;
     }
-
     public static ArrayList<Lecture> findByParticipator(Teacher teacher){
         ArrayList<Lecture> ret = new ArrayList<>();
         for (Lecture walk:list){
@@ -38,25 +42,23 @@ public class Lecture {
         }
         return ret;
     }
-
     @Override
     public String toString() {
-        String ret = name+": "+supervisor.name+"\n";
+        String ret = name+": "+supervisor.getName()+"\n";
         for (Subject walk:subjects)
-            ret+=walk.name+" ";
+            ret+=walk.getName()+" ";
         return ret;
     }
-
     public String print(){
         String ret = name +" | "
-                +"Supervisor: "+supervisor.name+" | ";
+                +"Supervisor: "+supervisor.getName()+" | ";
         ret += "referee(s): ";
-        for (Teacher walk:referees)
-            ret+=walk.name+", ";
+        for (Teacher t:referees)
+            ret+=t.getName()+", ";
         ret += " | ";
         ret += "Subject(s): ";
-        for (Subject walk:subjects)
-            ret+=walk.name+", ";
+        for (Subject t:subjects)
+            ret+=t.getName()+", ";
         ret += " | ";
         return ret;
     }
@@ -66,9 +68,9 @@ public class Lecture {
         if (referees.size() == 2) {
             ret += name;
             ret += " ";
-            ret += referees.get(0).name;
+            ret += referees.get(0).getName();
             ret += " ";
-            ret += referees.get(1).name;
+            ret += referees.get(1).getName();
         }
         else {
             System.out.println("Refress Size of " + name + " are not 2 , they are " + referees.size());

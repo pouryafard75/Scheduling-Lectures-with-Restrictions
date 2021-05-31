@@ -7,48 +7,35 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Collections;
 import java.util.Scanner;
-public class State {
-    public int Dates; // fitness
-    public ArrayList<TimePart> times;
-    public String result = "";
 
+public class State {
+    private int Dates; // fitness
+    private ArrayList<TimePart> times;
+    private String result = "";
 
     State() {
         times = new ArrayList<>();
         ClearRefrees();
         Fill();
-        Dates = times.get(times.size() - 1).day;
+        Dates = times.get(times.size() - 1).getDay();
         CalculateResult();
-    }
-
-    public String getAllInfo()
-    {
-        String result = "";
-        for (TimePart tp : times) {
-            for (Lecture lec : tp.lectures) {
-                result += lec.print();
-                result += lec.output();
-                result += " " + tp.day + " " + tp.part;
-                result += "\r\n";
-            }
-        }
-        return result;
     }
 
     State(ArrayList<TimePart> tp) {
         times = tp;
     }
 
-    public void ClearRefrees() {
+    private void ClearRefrees() {
         for (Lecture lt : Lecture.list)
             lt.referees.clear();
     }
 
-    void CalculateResult() {
+    private void CalculateResult() {
         for (TimePart tp : times) {
             for (Lecture lec : tp.lectures) {
+                StringBuilder sb = new StringBuilder();
                 result += lec.output();
-                result += " " + tp.day + " " + tp.part;
+                result += " " + tp.getDay() + " " + tp.getPart();
                 result += "\r\n";
             }
 
@@ -185,8 +172,8 @@ public class State {
                     tempTeachers.clear();
                 }
                 if (!inserted) {
-                    int lastday = times.get(times.size() - 1).day;
-                    int lastpart = times.get(times.size() - 1).part;
+                    int lastday = times.get(times.size() - 1).getDay();
+                    int lastpart = times.get(times.size() - 1).getPart();
                     if (lastpart != 4)
                         lastpart++;
                     else {

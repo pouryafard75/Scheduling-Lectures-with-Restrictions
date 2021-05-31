@@ -87,7 +87,7 @@ public class Schedule {
             }
             for(Lecture lecture:Lecture.findByParticipator(walk)){
                 TimePart timePart = lecture.getTimePart();
-                int cellNumber = (timePart.day-1)*4 + timePart.part;
+                int cellNumber = (timePart.getDay()-1)*4 + timePart.getPart();
                 HSSFCell cell =  cells.get(cellNumber-1);
                 String lastContent = cell.getStringCellValue();
                 cell.setCellValue(lastContent + lecture.print());
