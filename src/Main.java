@@ -21,18 +21,18 @@ public class Main {
         ArrayList<State> states = new ArrayList<>();
         State st1 = new State();
         bestResult = st1.result;
-        bestDay = st1.Dates;
+        bestDay = st1.get_num_of_dates();
         states.add(st1);
         for (int i = 0; i < attempts ; i++) {
             State st = new State();
-            if (st.Dates < bestDay )
+            if (st.get_num_of_dates() < bestDay )
             {
                 states.clear();
                 states.add(st);
-                bestDay = st.Dates;
+                bestDay = st.get_num_of_dates();
                 bestResult = st.result;
             }
-            else if (st.Dates ==  bestDay) {
+            else if (st.get_num_of_dates() ==  bestDay) {
                 states.add(st);
             }
         }

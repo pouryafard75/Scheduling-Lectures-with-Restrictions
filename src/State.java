@@ -9,15 +9,19 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class State {
-    private int Dates; // fitness
+    private int _num_of_dates; // fitness
     private ArrayList<TimePart> times;
-    private String result = "";
+    public String result = "";
+
+    public int get_num_of_dates() {
+        return _num_of_dates;
+    }
 
     State() {
         times = new ArrayList<>();
         ClearRefrees();
         Fill();
-        Dates = times.get(times.size() - 1).getDay();
+        _num_of_dates = times.get(times.size() - 1).getDay();
         CalculateResult();
     }
 
