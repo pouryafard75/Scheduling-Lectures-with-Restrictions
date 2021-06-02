@@ -20,7 +20,6 @@ public class Lecture {
         referees = new ArrayList<>();
         subjects = new HashSet<>();
     }
-
     public Set<Subject> getSubjects() {
         return new HashSet<>(subjects);
     }
@@ -33,6 +32,12 @@ public class Lecture {
     }
     public int getRefereesSize(){
         return referees.size();
+    }
+    public boolean isAssigned()
+    {
+        if (referees.size() == 2)
+            return true;
+        return false;
     }
     public int addReferee(Teacher t)
     {

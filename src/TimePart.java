@@ -5,6 +5,7 @@ import java.util.ArrayList;
  */
 public class TimePart {
 
+    private static final int PARTS_PER_DAY = 4;
     private int day;
     private int part;
     public ArrayList<Lecture> lectures;
@@ -59,5 +60,9 @@ public class TimePart {
         }
         return ret;
     }
-
+    static TimePart next(int _day,int _part)
+    {
+        if (_part >= PARTS_PER_DAY) return new TimePart(_day + 1,1);
+        return new TimePart(_day,_part+1);
+    }
 }

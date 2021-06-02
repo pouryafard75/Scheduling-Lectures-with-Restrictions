@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Array;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,13 +19,19 @@ public class Schedule {
     private ArrayList<Lecture> lectures;
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
+    private ArrayList<ArrayList<Teacher>> available;
     private ArrayList<TimePart> parts;
-    Schedule()
-    {
+    Schedule() {
         lectures = new ArrayList<>();
         teachers = new ArrayList<>();
         subjects = new ArrayList<>();
         parts = new ArrayList<>();
+    }
+    private ArrayList<Teacher> AllTeachersOnSubject(Subject s) {
+        ArrayList<Teacher> result = new ArrayList<>();
+        for(Teacher t:teachers)
+            if (t.getSubjects().contains(s)) result.add(t);
+        return result;
     }
     private Subject findSubjectByName(String name) {
         for(Subject sub:subjects)
@@ -183,6 +191,32 @@ public class Schedule {
         {
             e.printStackTrace();
             System.out.println("Problem with initializer");
+        }
+    }
+    public ArrayList<Lecture> unAssignedLectures() {
+        ArrayList<Lecture> unassigned = new ArrayList<>();
+        for(Lecture lec:lectures)
+            if (!lec.isAssigned()) unassigned.add(lec);
+        return unassigned;
+    }
+    Lecture checkPossiblities(ArrayList<Lecture> notAssigned)
+    {
+      return null;
+    }
+    void Solve()
+    {
+        int _day = 1;
+        int _part = 1;
+        new TimePart(_day,_part);
+        while(true)
+        {
+            ArrayList<Lecture> notAssigned = unAssignedLectures();
+            if (notAssigned.isEmpty()) {
+                //TODO: Completed
+                return;
+            }
+            Lecture lect = checkPossiblities(notAssigned);
+            if (lect == null) parts.add(TimePart.next(_day,_part));
         }
     }
 }
