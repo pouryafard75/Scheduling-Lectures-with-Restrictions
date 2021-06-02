@@ -199,8 +199,13 @@ public class Schedule {
             if (!lec.isAssigned()) unassigned.add(lec);
         return unassigned;
     }
-    Lecture checkPossiblities(ArrayList<Lecture> notAssigned)
+    public TimePart getLastTimePart()
     {
+        return parts.get(parts.size() - 1);
+    }
+    Lecture FindPossiblities(ArrayList<Lecture> notAssigned)
+    {
+        //TODO : FindPossiblities
       return null;
     }
     void Solve()
@@ -212,11 +217,15 @@ public class Schedule {
         {
             ArrayList<Lecture> notAssigned = unAssignedLectures();
             if (notAssigned.isEmpty()) {
-                //TODO: Completed
+                //TODO: Assignment Completed
                 return;
             }
-            Lecture lect = checkPossiblities(notAssigned);
+            Lecture lect = FindPossiblities(notAssigned);
             if (lect == null) parts.add(TimePart.next(_day,_part));
+            else
+            {
+                getLastTimePart().addLecture(lect);
+            }
         }
     }
 }

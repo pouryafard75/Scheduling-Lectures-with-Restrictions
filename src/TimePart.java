@@ -11,6 +11,14 @@ public class TimePart {
     public ArrayList<Lecture> lectures;
     static ArrayList<TimePart> list = new ArrayList<>();
 
+    public void addLecture(Lecture l)
+    {
+        lectures.add(l);
+    }
+    public ArrayList<Lecture> getLectures() {
+        return new ArrayList<>(lectures);
+    }
+
     //Getter for private fields
     public int getDay()
     {
