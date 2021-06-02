@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class TimePart {
 
-    private static final int PARTS_PER_DAY = 4;
+    public static final int PARTS_PER_DAY = 4;
     private int day;
     private int part;
     ArrayList<Lecture> lectures;
