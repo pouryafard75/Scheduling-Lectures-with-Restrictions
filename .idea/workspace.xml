@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Excel generation">
+    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="access changed to private">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schedule.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
     </list>
     <ignored path="AiCa3A 2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,26 +70,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="java" value="13258" />
-          <entry key="txt" value="1103" />
+          <entry key="java" value="13266" />
+          <entry key="txt" value="1155" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13258" />
-          <entry key="PLAIN_TEXT" value="1106" />
+          <entry key="JAVA" value="13266" />
+          <entry key="PLAIN_TEXT" value="1158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="java" value="81" />
+          <entry key="java" value="87" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="81" />
+          <entry key="JAVA" value="87" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -99,63 +99,7 @@
     <favorites_list name="AiCa3A 2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Schedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initializer#0;class#Schedule#0" />
-                <element signature="method#initSubjects#0;class#Schedule#0" />
-                <element signature="method#initTeachers#0;class#Schedule#0" />
-                <element signature="method#initLectures#0;class#Schedule#0" />
-                <element signature="method#findSubjectByName#0;class#Schedule#0" />
-                <element signature="method#findTeacherByName#0;class#Schedule#0" />
-                <element signature="method#printLectures#0;class#Schedule#0" />
-                <element signature="method#resultInfo#0;class#Schedule#0" />
-                <element signature="method#unAssignedLectures#0;class#Schedule#0" />
-                <element signature="method#FindPossibleMatching#0;class#Schedule#0" />
-                <element signature="method#findExperts#0;class#Schedule#0" />
-                <element signature="method#calculateBusyTeachers#0;class#Schedule#0" />
-                <element signature="method#calculateFreeTeachers#0;class#Schedule#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Teacher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Subject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -209,15 +153,15 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/temp.java" />
-        <option value="$PROJECT_DIR$/src/Subject.java" />
-        <option value="$PROJECT_DIR$/src/Teacher.java" />
         <option value="$PROJECT_DIR$/src/Lecture.java" />
         <option value="$PROJECT_DIR$/src/TimePart.java" />
         <option value="$PROJECT_DIR$/Teachers.txt" />
         <option value="$PROJECT_DIR$/src/Excel.java" />
         <option value="$PROJECT_DIR$/src/ExcelGen.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/Subject.java" />
       </list>
     </option>
   </component>
@@ -261,7 +205,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622653864689" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622654446880" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -532,7 +476,7 @@
       <workItem from="1622527660768" duration="40000" />
       <workItem from="1622528478263" duration="2088000" />
       <workItem from="1622551088046" duration="7816000" />
-      <workItem from="1622630495904" duration="22401000" />
+      <workItem from="1622630495904" duration="23261000" />
     </task>
     <task id="LOCAL-00001" summary="Change public accesses to private, adding getter , small renames">
       <created>1622478746286</created>
@@ -597,15 +541,28 @@
       <option name="project" value="LOCAL" />
       <updated>1622652648233</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Small refactorings">
+      <created>1622653915601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622653915601</updated>
+    </task>
+    <task id="LOCAL-00011" summary="access changed to private">
+      <created>1622654112591</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622654112591</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48958000" />
+    <option name="totallyTimeSpent" value="49818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="775" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27382874" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -655,7 +612,9 @@
     <MESSAGE value="Completing the logic.&#10;Adding StringBuilding methods&#10;Removing some unnessary functions&#10;(TODO: EXCEL generation and removing static lists from classes)" />
     <MESSAGE value="Removing more unnecessary functions, switching to new design&#10;(TODO: EXCEL and file generation)" />
     <MESSAGE value="Excel generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Excel generation" />
+    <MESSAGE value="Small refactorings" />
+    <MESSAGE value="access changed to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="access changed to private" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -767,17 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lecture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1622649267976" expanded="true" signature="0:1448" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExcelGen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -795,43 +743,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimePart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="237" column="13" lean-forward="true" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#initializer#0;class#Schedule#0" />
             <element signature="method#initSubjects#0;class#Schedule#0" />
             <element signature="method#initTeachers#0;class#Schedule#0" />
@@ -845,7 +761,47 @@
             <element signature="method#findExperts#0;class#Schedule#0" />
             <element signature="method#calculateBusyTeachers#0;class#Schedule#0" />
             <element signature="method#calculateFreeTeachers#0;class#Schedule#0" />
+            <element signature="class#ExcelGen#0;class#Schedule#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lecture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1622649267976" expanded="true" signature="0:1448" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimePart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
