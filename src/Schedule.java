@@ -7,11 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.Array;
-import java.sql.Time;
 import java.util.*;
-
-import static javafx.application.Platform.exit;
 
 /**
  * Created by pouryafard on 1/15/2017 AD.
@@ -28,12 +24,6 @@ public class Schedule {
         subjects = new ArrayList<>();
         parts = new ArrayList<>();
     }
-    private ArrayList<Teacher> AllTeachersOnSubject(Subject s) {
-        ArrayList<Teacher> result = new ArrayList<>();
-        for(Teacher t:teachers)
-            if (t.getSubjects().contains(s)) result.add(t);
-        return result;
-    }
     private Subject findSubjectByName(String name) {
         for(Subject sub:subjects)
             if(sub.getName().equals(name))
@@ -46,12 +36,6 @@ public class Schedule {
                 return teacher;
         return null;
     }
-    private Lecture findLectureByName(String name){
-        for(Lecture lect:lectures)
-            if(lect.getName().equals(name))
-                return lect;
-        return null;
-    }
     void exportExcel(){
         try {
             initDataForExcel();
@@ -61,20 +45,20 @@ public class Schedule {
         }
     }
     private void initDataForExcel() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("Sample Output.txt"));
-        while (scanner.hasNext()){
-            Lecture lec = Lecture.findByName(scanner.next());
-            Teacher referee1 = Teacher.findByName(scanner.next());
-            Teacher referee2 = Teacher.findByName(scanner.next());
-            int day = scanner.nextInt();
-            int part = scanner.nextInt();
-            lec.clearReferees();
-            lec.addReferee(referee1);
-            lec.addReferee(referee2);
-            TimePart timePart = TimePart.get(day,part);
-            timePart.lectures.add(lec);
-        }
-        System.out.println("Successful initialize!");
+//        Scanner scanner = new Scanner(new File("Sample Output.txt"));
+//        while (scanner.hasNext()){
+//            Lecture lec = Lecture.findByName(scanner.next());
+//            Teacher referee1 = Teacher.findByName(scanner.next());
+//            Teacher referee2 = Teacher.findByName(scanner.next());
+//            int day = scanner.nextInt();
+//            int part = scanner.nextInt();
+//            lec.clearReferees();
+//            lec.addReferee(referee1);
+//            lec.addReferee(referee2);
+//            TimePart timePart = TimePart.get(day,part);
+//            timePart.lectures.add(lec);
+//        }
+//        System.out.println("Successful initialize!");
     }
     private void makeExcel() throws IOException {
         //TODO : use correct outputs;

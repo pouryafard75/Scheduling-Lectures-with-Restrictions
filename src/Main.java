@@ -10,49 +10,12 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
-
-
         Schedule schedule = new Schedule();
         schedule.initializer();
         schedule.solve();
         schedule.printResult();
-        //schedule.exportExcel();
-
-//        int attempts = 1000;
-//        String bestResult;
-//        int bestDay;
-//        ArrayList<State> states = new ArrayList<>();
-//        State st1 = new State();
-//        bestResult = st1.result;
-//        bestDay = st1.get_num_of_dates();
-//        states.add(st1);
-//        for (int i = 0; i < attempts ; i++) {
-//            State st = new State();
-//            if (st.get_num_of_dates() < bestDay )
-//            {
-//                states.clear();
-//                states.add(st);
-//                bestDay = st.get_num_of_dates();
-//                bestResult = st.result;
-//            }
-//            else if (st.get_num_of_dates() ==  bestDay) {
-//                states.add(st);
-//            }
-//        }
-//        try
-//        {
-//            FileWriter myWriter = new FileWriter("Sample Output.txt");
-//            myWriter.write(bestResult);
-//            myWriter.close();
-//            System.out.println("Successfully wrote to the file.");
-//        } catch (IOException e) {
-//            System.out.println("An error occurred.");
-//            e.printStackTrace();
-//        }
-//        System.out.println(bestResult);
-//        schedule.exportExcel();
+        schedule.exportExcel();
     }
-
 }
 
 
