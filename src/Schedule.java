@@ -17,7 +17,6 @@ public class Schedule {
     private ArrayList<Lecture> lectures;
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
-    private ArrayList<ArrayList<Teacher>> available;
     private ArrayList<TimePart> parts;
     Schedule() {
         lectures = new ArrayList<>();
@@ -25,61 +24,19 @@ public class Schedule {
         subjects = new ArrayList<>();
         parts = new ArrayList<>();
     }
-    private Subject findSubjectByName(String name) {
-        for(Subject sub:subjects)
-            if(sub.getName().equals(name))
-                return sub;
-        return null;
-    }
-    private Teacher findTeacherByName(String name){
-        for(Teacher teacher:teachers)
-            if(teacher.getName().equals(name))
-                return teacher;
-        return null;
-    }
-    void exportExcel(){
+
+    //Init methods
+    void initializer(){
         try {
-            makeExcel();
-        } catch (IOException e) {
+            initSubjects();
+            initTeachers();
+            initLectures();
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
+            System.out.println("Problem with initializer");
         }
-    }
-
-    private void makeExcel() throws IOException {
-
-        //TODO : use correct outputs;
-        String exportAdr = "Schedule.xls";
-        HSSFWorkbook workbook = new HSSFWorkbook();
-        HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
-
-        HSSFRow row = daysSheet.createRow(0);
-        for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
-            row.createCell(curPart).setCellValue("Part " + curPart);
-        for (int curday = 1; curday <= parts.get(parts.size() - 1).getDay(); curday++) {
-            row = daysSheet.createRow(curday);
-            row.createCell(0).setCellValue("Day" + curday);
-            for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++) {
-                StringBuilder stringBuilder = new StringBuilder();
-                for (TimePart tp : parts) {
-                    if (tp.getDay() == curday && tp.getPart() == curPart) {
-                        for (Lecture lecture : tp.getLectures())
-                            stringBuilder.append(lecture.toString()).append("\n\n");
-                    }
-                }
-                HSSFCell cell = row.createCell(curPart);
-                cell.setCellValue(stringBuilder.toString());
-                CellStyle style = workbook.createCellStyle();
-                style.setWrapText(true);
-                cell.setCellStyle(style);
-
-            }
-        }
-        for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
-            daysSheet.autoSizeColumn(curPart);
-        FileOutputStream outputFile = new FileOutputStream(exportAdr);
-        workbook.write(outputFile);
-        outputFile.close();
-        System.out.println("Excel successfully generated!");
     }
     private void initSubjects() throws FileNotFoundException {
         Scanner subjectInput = new Scanner(new File("Subjects.txt"));
@@ -126,6 +83,27 @@ public class Schedule {
         }
         lecInput.close();
     }
+
+    //Find Methods
+    private Subject findSubjectByName(String name) {
+        for(Subject sub:subjects)
+            if(sub.getName().equals(name))
+                return sub;
+        return null;
+    }
+    private Teacher findTeacherByName(String name){
+        for(Teacher teacher:teachers)
+            if(teacher.getName().equals(name))
+                return teacher;
+        return null;
+    }
+    private TimePart getLastTimePart() { return parts.get(parts.size() - 1);  }
+
+    //Print methods
+    void printResult()
+    {
+        System.out.println(resultInfo());
+    }
     private void printTeachers()
     {
         for (Teacher t1: teachers) System.out.println(t1.getName());
@@ -134,30 +112,23 @@ public class Schedule {
         for (Lecture l:  lectures)
             System.out.println(l);
     }
-    void initializer(){
-        try {
-            initSubjects();
-            initTeachers();
-            initLectures();
+    private String resultInfo() {
+        StringBuilder result = new StringBuilder();
+        for ( TimePart tp: parts) {
+            result.append(tp.info()).append(": ").append("\n");
+            for (Lecture l : tp.getLectures()) result.append(l.toString()).append("\n");
         }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            System.out.println("Problem with initializer");
-        }
+        return result.toString();
     }
+
+
     private ArrayList<Lecture> unAssignedLectures() {
         ArrayList<Lecture> unassigned = new ArrayList<>();
         for(Lecture lec:lectures)
             if (!lec.isAssigned()) unassigned.add(lec);
         return unassigned;
     }
-    private TimePart getLastTimePart()
-    {
-        return parts.get(parts.size() - 1);
-    }
-    private Lecture FindPossibleMatching(ArrayList<Lecture> notAssigned, PriorityQueue<Teacher> possibleTeachers)
-    {
+    private Lecture FindPossibleMatching(ArrayList<Lecture> notAssigned, PriorityQueue<Teacher> possibleTeachers) {
 
         for (Lecture lecture: notAssigned) {
             Set<Teacher> experts = new HashSet<>();
@@ -179,8 +150,7 @@ public class Schedule {
             if (t.isExpertInSubject(sub)) result.add(t);
         return result;
     }
-    private Set<Teacher> calculateBusyTeachers()
-    {
+    private Set<Teacher> calculateBusyTeachers() {
         TimePart last = getLastTimePart();
 
         Set<Teacher> busyTeachers = new HashSet<>();
@@ -191,8 +161,7 @@ public class Schedule {
         }
         return busyTeachers;
     }
-    private PriorityQueue<Teacher> calculateFreeTeachers()
-    {
+    private PriorityQueue<Teacher> calculateFreeTeachers() {
         PriorityQueue<Teacher> freeTeachers = new PriorityQueue<>(Comparator.comparingInt(Teacher::getSubjectsSize));
         Set<Teacher> busyTeachers = calculateBusyTeachers();
         for (Teacher t : teachers) {
@@ -200,21 +169,7 @@ public class Schedule {
         }
         return freeTeachers;
     }
-    void printResult()
-    {
-        System.out.println(resultInfo());
-    }
-    private String resultInfo()
-    {
-        StringBuilder result = new StringBuilder();
-        for ( TimePart tp: parts) {
-            result.append(tp.info()).append(": ").append("\n");
-            for (Lecture l : tp.getLectures()) result.append(l.toString()).append("\n");
-        }
-        return result.toString();
-    }
-    void solve()
-    {
+    void solve() {
         int _day = 1;
         int _part = 1;
         TimePart curPart = new TimePart(_day,_part);
@@ -239,6 +194,54 @@ public class Schedule {
             }
 
 
+        }
+    }
+    void exportExcel()
+    {
+        ExcelGen excel = new ExcelGen();
+        try {
+            excel.makeExcel((parts));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public class ExcelGen {
+        //ExcelGen Method
+        public void makeExcel(List<TimePart> parts) throws IOException {
+            //TODO : use correct outputs;
+            String exportAdr = "Schedule.xls";
+            HSSFWorkbook workbook = new HSSFWorkbook();
+            HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
+
+            HSSFRow row = daysSheet.createRow(0);
+            for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
+                row.createCell(curPart).setCellValue("Part " + curPart);
+            for (int curday = 1; curday <= parts.get(parts.size() - 1).getDay(); curday++) {
+                row = daysSheet.createRow(curday);
+                row.createCell(0).setCellValue("Day" + curday);
+                for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    for (TimePart tp : parts) {
+                        if (tp.getDay() == curday && tp.getPart() == curPart) {
+                            for (Lecture lecture : tp.getLectures())
+                                stringBuilder.append(lecture.toString()).append("\n\n");
+                        }
+                    }
+                    HSSFCell cell = row.createCell(curPart);
+                    cell.setCellValue(stringBuilder.toString());
+                    CellStyle style = workbook.createCellStyle();
+                    style.setWrapText(true);
+                    cell.setCellStyle(style);
+
+                }
+            }
+            for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
+                daysSheet.autoSizeColumn(curPart);
+            FileOutputStream outputFile = new FileOutputStream(exportAdr);
+            workbook.write(outputFile);
+            outputFile.close();
+            System.out.println("ExcelGen successfully generated!");
         }
     }
 }
