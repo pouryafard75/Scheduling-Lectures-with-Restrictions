@@ -22,7 +22,7 @@ public class State {
         ClearRefrees();
         Fill();
         _num_of_dates = times.get(times.size() - 1).getDay();
-        CalculateResult();
+        //CalculateResult();
     }
 
     State(ArrayList<TimePart> tp) {
@@ -34,17 +34,17 @@ public class State {
             lt.clearReferees();
     }
 
-    private void CalculateResult() {
-        for (TimePart tp : times) {
-            for (Lecture lec : tp.lectures) {
-                StringBuilder sb = new StringBuilder();
-                result += lec.output();
-                result += " " + tp.getDay() + " " + tp.getPart();
-                result += "\r\n";
-            }
-
-        }
-    }
+//    private void CalculateResult() {
+//        for (TimePart tp : times) {
+//            for (Lecture lec : tp.lectures) {
+//                StringBuilder sb = new StringBuilder();
+//                result += lec.output();
+//                result += " " + tp.getDay() + " " + tp.getPart();
+//                result += "\r\n";
+//            }
+//
+//        }
+//    }
 
     public void Fill() {
         int _day = 1;  //firstday

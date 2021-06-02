@@ -14,7 +14,12 @@ public class Teacher {
         this.name = name;
         subjects = new HashSet<>();
     }
-
+    public boolean isExpertInSubject(Subject s)
+    {
+        if (subjects.contains(s))
+            return true;
+        return false;
+    }
     //Getter for private field
     String getName()
     {
@@ -22,6 +27,10 @@ public class Teacher {
     }
     public Set<Subject> getSubjects() {
         return new HashSet<>(subjects);
+    }
+    public int getSubjectsSize()
+    {
+        return subjects.size();
     }
     void addSubject(Subject s)
     {

@@ -52,7 +52,10 @@ public class TimePart {
         }
         return max;
     }
-
+    public String info()
+    {
+        return  "Day " + day + ", part "+part ;
+    }
     public String toString(){
         String ret = "day "+day+" part "+part+"\n";
         for(Lecture walk:lectures){
@@ -68,9 +71,9 @@ public class TimePart {
         }
         return ret;
     }
-    static TimePart next(int _day,int _part)
+    static TimePart next(TimePart input)
     {
-        if (_part >= PARTS_PER_DAY) return new TimePart(_day + 1,1);
-        return new TimePart(_day,_part+1);
+        if (input.getPart() >= PARTS_PER_DAY) return new TimePart(input.getDay() + 1,1);
+        return new TimePart(input.getDay(),input.getPart()+1);
     }
 }

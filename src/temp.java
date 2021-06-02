@@ -1,13 +1,16 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class temp {
     public static void main(String[] args) {
-        Property p1 = new Property(new Person(20,"ShervinJan"));
-        Person owner = p1.owner;
-        p1.owner.print();
-        owner.age = 4;
-        p1.owner.print();
-
+        Set<Person> set = new HashSet<>();
+        set.add(new Person(10,"p"));
+        set.add(new Person(32,"q"));
+        Iterator<Person> it = set.iterator();
+        it.next().print();
+        it.next().print();
 
     }
 }

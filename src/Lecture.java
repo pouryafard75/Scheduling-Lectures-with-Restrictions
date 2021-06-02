@@ -30,6 +30,9 @@ public class Lecture {
     public Teacher getSupervisor() {
         return supervisor;
     }
+    public ArrayList<Teacher> getReferees() {
+        return new ArrayList<>(referees);
+    }
     public int getRefereesSize(){
         return referees.size();
     }
@@ -74,41 +77,18 @@ public class Lecture {
         }
         return ret;
     }
+
     @Override
     public String toString() {
-        String ret = name+": "+supervisor.getName()+"\n";
-        for (Subject walk:subjects)
-            ret+=walk.getName()+" ";
-        return ret;
-    }
-    public String print(){
-        String ret = name +" | "
-                +"Supervisor: "+supervisor.getName()+" | ";
-        ret += "referee(s): ";
-        for (Teacher t:referees)
-            ret+=t.getName()+", ";
-        ret += " | ";
-        ret += "Subject(s): ";
-        for (Subject t:subjects)
-            ret+=t.getName()+", ";
-        ret += " | ";
-        return ret;
-    }
-    public String output()
-    {
-        String ret = "";
-        if (referees.size() == 2) {
-            ret += name;
-            ret += " ";
-            ret += referees.get(0).getName();
-            ret += " ";
-            ret += referees.get(1).getName();
+        StringBuilder result = new StringBuilder();
+        result.append(getName());
+        result.append(" | Supervisor : ");
+        result.append(getSupervisor().getName());
+        result.append(" | Referees : " );
+        for (Teacher t : getReferees()) {
+            result.append(t.getName()).append(" , ");
         }
-        else {
-            System.out.println("Refress Size of " + name + " are not 2 , they are " + referees.size());
-            new Scanner(System.in).nextInt();
-        }
-        return ret;
+        return result.toString();
     }
 
     public TimePart getTimePart(){
