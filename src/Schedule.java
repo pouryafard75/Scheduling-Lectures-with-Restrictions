@@ -206,7 +206,7 @@ public class Schedule {
         }
 
     }
-    public class ExcelGen {
+    private class ExcelGen {
         //ExcelGen Method
         public void makeExcel(List<TimePart> parts) throws IOException {
             //TODO : use correct outputs;
