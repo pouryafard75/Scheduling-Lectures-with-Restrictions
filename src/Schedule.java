@@ -14,17 +14,44 @@ import java.util.Scanner;
  * Created by pouryafard on 1/15/2017 AD.
  */
 public class Schedule {
-
-    public void exportExcel(){
+    private ArrayList<Lecture> lectures;
+    private ArrayList<Teacher> teachers;
+    private ArrayList<Subject> subjects;
+    private ArrayList<TimePart> parts;
+    Schedule()
+    {
+        lectures = new ArrayList<>();
+        teachers = new ArrayList<>();
+        subjects = new ArrayList<>();
+        parts = new ArrayList<>();
+    }
+    private Subject findSubjectByName(String name) {
+        for(Subject sub:subjects)
+            if(sub.getName().equals(name))
+                return sub;
+        return null;
+    }
+    private Teacher findTeacherByName(String name){
+        for(Teacher teacher:teachers)
+            if(teacher.getName().equals(name))
+                return teacher;
+        return null;
+    }
+    private Lecture findLectureByName(String name){
+        for(Lecture lect:lectures)
+            if(lect.getName().equals(name))
+                return lect;
+        return null;
+    }
+    void exportExcel(){
         try {
-            initializeFromFile();
+            initDataForExcel();
             makeExcel();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    private void initializeFromFile() throws FileNotFoundException {
+    private void initDataForExcel() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("Sample Output.txt"));
         while (scanner.hasNext()){
             Lecture lec = Lecture.findByName(scanner.next());
@@ -32,7 +59,6 @@ public class Schedule {
             Teacher referee2 = Teacher.findByName(scanner.next());
             int day = scanner.nextInt();
             int part = scanner.nextInt();
-
             lec.clearReferees();
             lec.addReferee(referee1);
             lec.addReferee(referee2);
@@ -41,11 +67,9 @@ public class Schedule {
         }
         System.out.println("Successful initialize!");
     }
-
     private void makeExcel() throws IOException {
         String exportAdr = "Schedule.xls";
         HSSFWorkbook workbook = new HSSFWorkbook();
-
         //////////////////////////////////Days Sheet////////////////////////////////////
         HSSFSheet daysSheet = workbook.createSheet("Days");
         for(int dayCounter =1; dayCounter<= TimePart.lastDay();dayCounter++){
@@ -104,5 +128,61 @@ public class Schedule {
         workbook.write(outputFile);
         outputFile.close();
         System.out.println("Excel successfully generated!");
+    }
+    private void initSubjects() throws FileNotFoundException {
+        Scanner subjectInput = new Scanner(new File("Subjects.txt"));
+        while (subjectInput.hasNext())
+            subjects.add(new Subject(subjectInput.next()));
+        subjectInput.close();
+    }
+    private void initTeachers() throws Exception {
+        Scanner teacherInput = new Scanner(new File("Teachers.txt"));
+        while (teacherInput.hasNext())
+        {
+            Teacher teacher = new Teacher(teacherInput.next());
+            int subjectCount = teacherInput.nextInt();
+            for (int i = 0; i < subjectCount; i++) {
+                String subjectname = teacherInput.next();
+                Subject subject = findSubjectByName(subjectname);
+                if (subject == null)
+                    throw new Exception("No Subject found with the name :" + subjectname);
+                teacher.addSubject(subject);
+                subject.addTeacher(teacher);
+            }
+        }
+        teacherInput.close();
+    }
+    private void initLectures() throws Exception {
+        Scanner lecInput = new Scanner(new File("Lectures.txt"));
+        while (lecInput.hasNext()){
+            String lecname = lecInput.next();
+            String teachername = lecInput.next();
+            Teacher supervisor = findTeacherByName(teachername);
+            if (supervisor == null)
+                throw new Exception("No Teacher found with the name :" + teachername);
+            Lecture lec = new Lecture(lecname,supervisor);
+            int lectureCount = lecInput.nextInt();
+            for (int i = 0; i < lectureCount; i++) {
+                String subjectname = lecInput.next();
+                Subject sub = findSubjectByName(subjectname);
+                if (sub == null)
+                    throw new Exception("No Subject found with the name :" + subjectname);
+                lec.addSubject(sub);
+            }
+            lectures.add(lec);
+        }
+        lecInput.close();
+    }
+    void initializer(){
+        try {
+            initSubjects();
+            initTeachers();
+            initLectures();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            System.out.println("Problem with initializer");
+        }
     }
 }

@@ -2,49 +2,25 @@ import java.util.ArrayList;
 
 public class temp {
     public static void main(String[] args) {
-        t2 test = new t2();
-        System.out.println(test.getTps().size());
-        test.getTps().add(new example(1,4));
-        System.out.println(test.getTps().size());
-        example qq = new example(1,4);
-        System.out.println(qq.getTT_ii());
-        qq.getTT_ii().replace("Q","R");
-        System.out.println(qq.getTT_ii());
+        Property p1 = new Property(new Person(20,"ShervinJan"));
+        Person owner = p1.owner;
+        p1.owner.print();
+        owner.age = 4;
+        p1.owner.print();
 
-    }
 
-}
-class t2{
-    private ArrayList<example> tps;
-    t2()
-    {
-        tps = new ArrayList<>();
-        tps.add(new example(1,1));
-        tps.add(new example(1,3));
-    }
-
-    public ArrayList<example> getTps() {
-        return tps;
     }
 }
-class example{
-
-    private int day;
-    private int part;
-    private String TT_ii;
-
-    example(int day, int part)
+class Property{
+    public final Person owner;
+    Property(Person owner)
     {
-        this.day = day;
-        this.part = part;
-        TT_ii = "QWERT";
+        this.owner = owner;
     }
-
-    public int getDay() {
-        return day;
-    }
-
-    public String getTT_ii() {
-        return TT_ii;
-    }
+}
+class Person{
+    public int age;
+    private String name;
+    public Person(int age, String name) {  this.age = age;  this.name = name; }
+    public void print()  {  System.out.println(age + " " + name); }
 }
