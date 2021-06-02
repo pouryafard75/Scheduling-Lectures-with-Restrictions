@@ -31,7 +31,7 @@ public class State {
 
     private void ClearRefrees() {
         for (Lecture lt : Lecture.list)
-            lt.referees.clear();
+            lt.clearReferees();
     }
 
     private void CalculateResult() {
@@ -52,144 +52,147 @@ public class State {
         boolean timeChanged = false;
         TimePart tp;
         times.add(new TimePart(1,1));
-        PriorityQueue<Teacher> possibleTeachers = new PriorityQueue<>((o1, o2) -> o1.subjects.size() - o2.subjects.size());
-        ArrayList<Teacher> tempTeachers = new ArrayList<>();
-        for (int i = 0; i < Lecture.list.size(); i++) {
-            boolean nope = false;
-            tp = times.get(times.size() - 1);
-            if (timeChanged == true)
-            {
-                timeChanged = false;
-                i = 0;
-                continue;
-            }
-            tempTeachers.clear();
-            possibleTeachers.clear();
-            Lecture currentLec = Lecture.list.get(i);
-            if (!currentLec.referees.isEmpty()) {
-                continue;
-            }
-            for (Subject s : currentLec.subjects) {
-                tempTeachers = Teacher.BySubject(s);
-                for (Teacher teacher : tempTeachers) {
-                    if (!possibleTeachers.contains(teacher))
-                        possibleTeachers.add(teacher);
-                    possibleTeachers.remove(currentLec.supervisor);
-                    for (Lecture lecture : tp.lectures)
-                    {
-                        if (lecture.supervisor == currentLec.supervisor)
-                            nope = true;
-                    }
-                    for (Lecture le : tp.lectures)
-                    {
-                        if (!le.referees.isEmpty()) {
-                            possibleTeachers.remove(le.referees.get(0));
-                            possibleTeachers.remove(le.referees.get(1));
-                        }
-                        possibleTeachers.remove(le.supervisor);
-                    }
-                }
-            }
-            //Pick Two Teacher
-            if (!nope && possibleTeachers.size() >= 2) {
-                currentLec.referees.add(possibleTeachers.poll());
-                currentLec.referees.add(possibleTeachers.poll());
-                tp.lectures.add(currentLec);
-            } else {
-                nope = false;
-                for (int l = 0; l < Lecture.list.size(); l++) {
-                    possibleTeachers.clear();
-                    tempTeachers.clear();
-                    Lecture replacement = Lecture.list.get(l);
-                    if (replacement.referees.isEmpty() && replacement != currentLec) {
-                        for (Subject s : replacement.subjects) {
-                            tempTeachers = Teacher.BySubject(s);
-                            for (Teacher teacher : tempTeachers) {
-                                if (!possibleTeachers.contains(teacher))
-                                    possibleTeachers.add(teacher);
-                            }
-                        }
-                        possibleTeachers.remove(replacement.supervisor);
-                        for (Lecture lecture : tp.lectures)
-                        {
-                            if (lecture.supervisor == replacement.supervisor)
-                                nope = true;
-                        }
-                        for (Lecture le : tp.lectures)
-                        {
-                            possibleTeachers.remove(le.referees.get(0));
-                            possibleTeachers.remove(le.referees.get(1));
-                            possibleTeachers.remove(le.supervisor);
-                        }
-                        //Pick Two Teacher
-                        if (!nope && possibleTeachers.size() >= 2) {
-                            replacement.referees.add(possibleTeachers.poll());
-                            replacement.referees.add(possibleTeachers.poll());
-                            tp.lectures.add(replacement);
-                            //System.out.println(replacement.name + replacement.referees.get(0).name + "&" + replacement.referees.get(1).name);
-                            possibleTeachers.clear();
-                            tempTeachers.clear();
-                        }
-                    }
-                }
-                if (_part == 4) {
-                    _part = 1;
-                    _day++;
-                } else _part++;
-                timeChanged = true;
-                times.add(new TimePart(_day, _part));
-                tempTeachers.clear();
-                possibleTeachers.clear();
-            }
-        }
-        for (Lecture lect : Lecture.list) {
-            boolean inserted = false;
-            if (lect.referees.isEmpty()) {
-                for (TimePart tps : times) {
-                    for (Subject s : lect.subjects) {
-                        tempTeachers = Teacher.BySubject(s);
-                        for (Teacher teacher : tempTeachers) {
-                            if (!possibleTeachers.contains(teacher))
-                                    possibleTeachers.add(teacher);
-                            possibleTeachers.remove(lect.supervisor);
-                            for (Lecture le : tps.lectures)
-                            {
-                                if (!le.referees.isEmpty()) {
-                                    possibleTeachers.remove(le.referees.get(0));
-                                    possibleTeachers.remove(le.referees.get(1));
-                                }
-                                possibleTeachers.remove(le.supervisor);
-                            }
 
-                        }
-                    }
-                    if (possibleTeachers.size() > 2) {
-                        lect.referees.add(possibleTeachers.poll());
-                        lect.referees.add(possibleTeachers.poll());
-                        tps.lectures.add(lect);
-                        possibleTeachers.clear();
-                        tempTeachers.clear();
-                        inserted = true;
-                        break;
-                    }
-                    possibleTeachers.clear();
-                    tempTeachers.clear();
-                }
-                if (!inserted) {
-                    int lastday = times.get(times.size() - 1).getDay();
-                    int lastpart = times.get(times.size() - 1).getPart();
-                    if (lastpart != 4)
-                        lastpart++;
-                    else {
-                        lastday++;
-                        lastpart = 1;
-                    }
+        //TODO : Rewrite the function;
 
-                    tp = new TimePart(lastday, lastpart);
-                    tp.lectures.add(lect);
-                    times.add(tp);
-                }
-            }
-        }
+//        PriorityQueue<Teacher> possibleTeachers = new PriorityQueue<>((o1, o2) -> o1.subjects.size() - o2.subjects.size());
+//        ArrayList<Teacher> tempTeachers = new ArrayList<>();
+//        for (int i = 0; i < Lecture.list.size(); i++) {
+//            boolean nope = false;
+//            tp = times.get(times.size() - 1);
+//            if (timeChanged == true)
+//            {
+//                timeChanged = false;
+//                i = 0;
+//                continue;
+//            }
+//            tempTeachers.clear();
+//            possibleTeachers.clear();
+//            Lecture currentLec = Lecture.list.get(i);
+//            if (!currentLec.referees.isEmpty()) {
+//                continue;
+//            }
+//            for (Subject s : currentLec.subjects) {
+//                tempTeachers = Teacher.BySubject(s);
+//                for (Teacher teacher : tempTeachers) {
+//                    if (!possibleTeachers.contains(teacher))
+//                        possibleTeachers.add(teacher);
+//                    possibleTeachers.remove(currentLec.supervisor);
+//                    for (Lecture lecture : tp.lectures)
+//                    {
+//                        if (lecture.supervisor == currentLec.supervisor)
+//                            nope = true;
+//                    }
+//                    for (Lecture le : tp.lectures)
+//                    {
+//                        if (!le.referees.isEmpty()) {
+//                            possibleTeachers.remove(le.referees.get(0));
+//                            possibleTeachers.remove(le.referees.get(1));
+//                        }
+//                        possibleTeachers.remove(le.supervisor);
+//                    }
+//                }
+//            }
+//            //Pick Two Teacher
+//            if (!nope && possibleTeachers.size() >= 2) {
+//                currentLec.referees.add(possibleTeachers.poll());
+//                currentLec.referees.add(possibleTeachers.poll());
+//                tp.lectures.add(currentLec);
+//            } else {
+//                nope = false;
+//                for (int l = 0; l < Lecture.list.size(); l++) {
+//                    possibleTeachers.clear();
+//                    tempTeachers.clear();
+//                    Lecture replacement = Lecture.list.get(l);
+//                    if (replacement.referees.isEmpty() && replacement != currentLec) {
+//                        for (Subject s : replacement.subjects) {
+//                            tempTeachers = Teacher.BySubject(s);
+//                            for (Teacher teacher : tempTeachers) {
+//                                if (!possibleTeachers.contains(teacher))
+//                                    possibleTeachers.add(teacher);
+//                            }
+//                        }
+//                        possibleTeachers.remove(replacement.supervisor);
+//                        for (Lecture lecture : tp.lectures)
+//                        {
+//                            if (lecture.supervisor == replacement.supervisor)
+//                                nope = true;
+//                        }
+//                        for (Lecture le : tp.lectures)
+//                        {
+//                            possibleTeachers.remove(le.referees.get(0));
+//                            possibleTeachers.remove(le.referees.get(1));
+//                            possibleTeachers.remove(le.supervisor);
+//                        }
+//                        //Pick Two Teacher
+//                        if (!nope && possibleTeachers.size() >= 2) {
+//                            replacement.referees.add(possibleTeachers.poll());
+//                            replacement.referees.add(possibleTeachers.poll());
+//                            tp.lectures.add(replacement);
+//                            //System.out.println(replacement.name + replacement.referees.get(0).name + "&" + replacement.referees.get(1).name);
+//                            possibleTeachers.clear();
+//                            tempTeachers.clear();
+//                        }
+//                    }
+//                }
+//                if (_part == 4) {
+//                    _part = 1;
+//                    _day++;
+//                } else _part++;
+//                timeChanged = true;
+//                times.add(new TimePart(_day, _part));
+//                tempTeachers.clear();
+//                possibleTeachers.clear();
+//            }
+//        }
+//        for (Lecture lect : Lecture.list) {
+//            boolean inserted = false;
+//            if (lect.referees.isEmpty()) {
+//                for (TimePart tps : times) {
+//                    for (Subject s : lect.subjects) {
+//                        tempTeachers = Teacher.BySubject(s);
+//                        for (Teacher teacher : tempTeachers) {
+//                            if (!possibleTeachers.contains(teacher))
+//                                    possibleTeachers.add(teacher);
+//                            possibleTeachers.remove(lect.supervisor);
+//                            for (Lecture le : tps.lectures)
+//                            {
+//                                if (!le.referees.isEmpty()) {
+//                                    possibleTeachers.remove(le.referees.get(0));
+//                                    possibleTeachers.remove(le.referees.get(1));
+//                                }
+//                                possibleTeachers.remove(le.supervisor);
+//                            }
+//
+//                        }
+//                    }
+//                    if (possibleTeachers.size() > 2) {
+//                        lect.referees.add(possibleTeachers.poll());
+//                        lect.referees.add(possibleTeachers.poll());
+//                        tps.lectures.add(lect);
+//                        possibleTeachers.clear();
+//                        tempTeachers.clear();
+//                        inserted = true;
+//                        break;
+//                    }
+//                    possibleTeachers.clear();
+//                    tempTeachers.clear();
+//                }
+//                if (!inserted) {
+//                    int lastday = times.get(times.size() - 1).getDay();
+//                    int lastpart = times.get(times.size() - 1).getPart();
+//                    if (lastpart != 4)
+//                        lastpart++;
+//                    else {
+//                        lastday++;
+//                        lastpart = 1;
+//                    }
+//
+//                    tp = new TimePart(lastday, lastpart);
+//                    tp.lectures.add(lect);
+//                    times.add(tp);
+//                }
+//            }
+//        }
     }
 }

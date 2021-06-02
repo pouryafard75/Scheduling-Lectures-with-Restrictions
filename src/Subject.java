@@ -7,22 +7,28 @@ import java.util.Set;
  */
 public class Subject {
     public static ArrayList<Subject> list =new ArrayList<>();
-    public Set<Teacher> teachers;
+    private Set<Teacher> teachers;
     private String name;
-
-    //Getter for private field;
-    public String getName()
-    {
-        return name;
-    }
-
-
     public Subject(String name) {
         this.name = name;
         teachers = new HashSet<>();
     }
-
-    public static Subject findByName(String name){
+    //Getter for private field;
+    String getName()
+    {
+        return name;
+    }
+    public Set<Teacher> getTeachers() {
+        return new HashSet<>(teachers);
+    }
+    void addTeacher(Teacher t1)
+    {
+        teachers.add(t1);
+    }
+    public int getTeachersSize(){
+        return teachers.size();
+    }
+    static Subject findByName(String name){
         for(Subject walk:list)
             if(walk.name.equals(name))
                 return walk;

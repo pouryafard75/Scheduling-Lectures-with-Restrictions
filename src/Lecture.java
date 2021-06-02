@@ -8,23 +8,50 @@ import java.util.Scanner;
  */
 public class Lecture {
     public static ArrayList<Lecture> list =new ArrayList<>();
-    public Set<Subject> subjects;
-    public Teacher supervisor;
-    public ArrayList<Teacher> referees;
 
+    private Set<Subject> subjects;
+    private final Teacher supervisor;
+    private ArrayList<Teacher> referees;
     private String name;
+
+    Lecture(String name, Teacher supervisor) {
+        this.name = name;
+        this.supervisor = supervisor;
+        referees = new ArrayList<>();
+        subjects = new HashSet<>();
+    }
+
+    public Set<Subject> getSubjects() {
+        return new HashSet<>(subjects);
+    }
+    public void addSubject(Subject s)
+    {
+        subjects.add(s);
+    }
+    public Teacher getSupervisor() {
+        return supervisor;
+    }
+    public int getRefereesSize(){
+        return referees.size();
+    }
+    public int addReferee(Teacher t)
+    {
+        if (referees.size() == 2)
+            return 0;
+        referees.add(t);
+        return 1;
+    }
+    public void clearReferees()
+    {
+        referees.clear();
+    }
 
     //No usage, however adding a getter
     public String getName() {
             return name;
     }
 
-    public Lecture(String name, Teacher supervisor) {
-        this.name = name;
-        this.supervisor = supervisor;
-        referees = new ArrayList<>();
-        subjects = new HashSet<>();
-    }
+
     public static Lecture findByName(String name){
         for(Lecture walk:list)
             if(walk.name.equals(name))

@@ -65,8 +65,8 @@ public class Main {
             for (int i = 0; i < subjectCount; i++) {
                 String name = teacherInput.next();
                 Subject subject = Subject.findByName(name);
-                teacher.subjects.add(subject);
-                subject.teachers.add(teacher);
+                teacher.addSubject(subject);
+                subject.addTeacher(teacher);
             }
             Teacher.list.add(teacher);
         }
@@ -76,7 +76,7 @@ public class Main {
             Lecture lec = new Lecture(lecInput.next(),Teacher.findByName(lecInput.next()));
             int lectureCount = lecInput.nextInt();
             for (int i = 0; i < lectureCount; i++) {
-                lec.subjects.add(Subject.findByName(lecInput.next()));
+                lec.addSubject(Subject.findByName(lecInput.next()));
             }
             Lecture.list.add(lec);
         }

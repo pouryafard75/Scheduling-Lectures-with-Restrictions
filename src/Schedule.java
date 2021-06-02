@@ -32,9 +32,10 @@ public class Schedule {
             Teacher referee2 = Teacher.findByName(scanner.next());
             int day = scanner.nextInt();
             int part = scanner.nextInt();
-            lec.referees.clear();
-            lec.referees.add(referee1);
-            lec.referees.add(referee2);
+
+            lec.clearReferees();
+            lec.addReferee(referee1);
+            lec.addReferee(referee2);
             TimePart timePart = TimePart.get(day,part);
             timePart.lectures.add(lec);
         }
