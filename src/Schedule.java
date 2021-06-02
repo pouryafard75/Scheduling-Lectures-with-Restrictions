@@ -4,10 +4,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellStyle;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -120,8 +117,6 @@ public class Schedule {
         }
         return result.toString();
     }
-
-
     private ArrayList<Lecture> unAssignedLectures() {
         ArrayList<Lecture> unassigned = new ArrayList<>();
         for(Lecture lec:lectures)
@@ -194,6 +189,17 @@ public class Schedule {
             }
 
 
+        }
+    }
+    void writeToFile()
+    {
+        try {
+            PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(new File("Sample Output.txt"))));
+            out.print(resultInfo());
+            out.flush();
+            System.out.println("File generated successfully");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
     void exportExcel()

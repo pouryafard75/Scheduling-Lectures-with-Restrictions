@@ -8,6 +8,7 @@ public class Main {
         schedule.initializer();
         schedule.solve();
         schedule.printResult();
+        schedule.writeToFile();
         schedule.exportExcel();
     }
 }
