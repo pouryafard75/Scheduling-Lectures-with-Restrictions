@@ -8,8 +8,7 @@ public class TimePart {
     public static final int PARTS_PER_DAY = 4;
     private int day;
     private int part;
-    ArrayList<Lecture> lectures;
-    static ArrayList<TimePart> list = new ArrayList<>();
+    private ArrayList<Lecture> lectures;
     void addLecture(Lecture l)
     {
         lectures.add(l);
