@@ -15,6 +15,7 @@ public class Schedule {
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
     private ArrayList<TimePart> parts;
+    private ScheduleOutput scheduleOutput;
     Schedule() {
         lectures = new ArrayList<>();
         teachers = new ArrayList<>();
@@ -97,10 +98,6 @@ public class Schedule {
     private TimePart getLastTimePart() { return parts.get(parts.size() - 1);  }
 
     //Print methods
-    void printResult()
-    {
-        System.out.println(resultInfo());
-    }
     private void printTeachers()
     {
         for (Teacher t1: teachers) System.out.println(t1.getName());
@@ -109,14 +106,7 @@ public class Schedule {
         for (Lecture l:  lectures)
             System.out.println(l);
     }
-    private String resultInfo() {
-        StringBuilder result = new StringBuilder();
-        for ( TimePart tp: parts) {
-            result.append(tp.info()).append(": ").append("\n");
-            for (Lecture l : tp.getLectures()) result.append(l.toString()).append("\n");
-        }
-        return result.toString();
-    }
+
     private ArrayList<Lecture> unAssignedLectures() {
         ArrayList<Lecture> unassigned = new ArrayList<>();
         for(Lecture lec:lectures)
@@ -164,7 +154,7 @@ public class Schedule {
         }
         return freeTeachers;
     }
-    void solve() {
+    ScheduleOutput solve() {
         int _day = 1;
         int _part = 1;
         TimePart curPart = new TimePart(_day,_part);
@@ -187,67 +177,8 @@ public class Schedule {
             {
                 getLastTimePart().addLecture(lect);
             }
-
-
         }
+        return new ScheduleOutput(parts);
     }
-    void writeToFile()
-    {
-        try {
-            PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(new File("Sample Output.txt"))));
-            out.print(resultInfo());
-            out.flush();
-            System.out.println("File generated successfully");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-    void exportExcel()
-    {
-        ExcelGen excel = new ExcelGen();
-        try {
-            excel.makeExcel((parts));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-    }
-    private class ExcelGen {
-        //ExcelGen Method
-        public void makeExcel(List<TimePart> parts) throws IOException {
-            //TODO : use correct outputs;
-            String exportAdr = "Schedule.xls";
-            HSSFWorkbook workbook = new HSSFWorkbook();
-            HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
-
-            HSSFRow row = daysSheet.createRow(0);
-            for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
-                row.createCell(curPart).setCellValue("Part " + curPart);
-            for (int curday = 1; curday <= parts.get(parts.size() - 1).getDay(); curday++) {
-                row = daysSheet.createRow(curday);
-                row.createCell(0).setCellValue("Day" + curday);
-                for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++) {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    for (TimePart tp : parts) {
-                        if (tp.getDay() == curday && tp.getPart() == curPart) {
-                            for (Lecture lecture : tp.getLectures())
-                                stringBuilder.append(lecture.toString()).append("\n\n");
-                        }
-                    }
-                    HSSFCell cell = row.createCell(curPart);
-                    cell.setCellValue(stringBuilder.toString());
-                    CellStyle style = workbook.createCellStyle();
-                    style.setWrapText(true);
-                    cell.setCellStyle(style);
-
-                }
-            }
-            for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
-                daysSheet.autoSizeColumn(curPart);
-            FileOutputStream outputFile = new FileOutputStream(exportAdr);
-            workbook.write(outputFile);
-            outputFile.close();
-            System.out.println("ExcelGen successfully generated!");
-        }
-    }
 }

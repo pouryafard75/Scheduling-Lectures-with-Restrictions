@@ -7,7 +7,6 @@ import java.util.Set;
 class Teacher {
     private Set<Subject> subjects;
     private String name;
-
     Teacher(String name) {
         this.name = name;
         subjects = new HashSet<>();

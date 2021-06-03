@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Schedule schedule = new Schedule();
         schedule.initializer();
-        schedule.solve();
-        schedule.printResult();
-        schedule.writeToFile();
-        schedule.exportExcel();
+        ScheduleOutput output = schedule.solve();
+        output.printResult();
+        output.writeToFile();
+        output.exportExcel();
     }
 }
 
