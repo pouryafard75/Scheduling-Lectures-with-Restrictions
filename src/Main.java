@@ -4,8 +4,12 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Schedule schedule = new Schedule();
-        schedule.initializer();
+        String TEACHERS_FILE_ADDR = "Teachers.txt";
+        String SUBJECTS_FILE_ADDR = "Subjects.txt";
+        String LECTURES_FILE_ADDR = "Lectures.txt";
+
+        ScheduleInput scheduleInput = new ScheduleInput(TEACHERS_FILE_ADDR,SUBJECTS_FILE_ADDR,LECTURES_FILE_ADDR);
+        Schedule schedule = new Schedule(scheduleInput);
         ScheduleOutput output = schedule.solve();
         output.printResult();
         output.writeToFile();

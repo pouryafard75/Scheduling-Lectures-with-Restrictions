@@ -10,87 +10,13 @@ public class Schedule {
     private ArrayList<Subject> subjects;
     private ArrayList<TimePart> parts;
     private ScheduleOutput scheduleOutput;
-    Schedule() {
-        lectures = new ArrayList<>();
-        teachers = new ArrayList<>();
-        subjects = new ArrayList<>();
+    Schedule(ScheduleInput scheduleInput) {
+        lectures = scheduleInput.getLectures();
+        teachers = scheduleInput.getTeachers();
+        subjects = scheduleInput.getSubjects();
         parts = new ArrayList<>();
     }
-
-    //Init methods
-    void initializer(){
-        try {
-            initSubjects();
-            initTeachers();
-            initLectures();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            System.out.println("Problem with initializer");
-        }
-    }
-    private void initSubjects() throws FileNotFoundException {
-        Scanner subjectInput = new Scanner(new File("Subjects.txt"));
-        while (subjectInput.hasNext())
-            subjects.add(new Subject(subjectInput.next()));
-        subjectInput.close();
-    }
-    private void initTeachers() throws Exception {
-        Scanner teacherInput = new Scanner(new File("Teachers.txt"));
-        while (teacherInput.hasNext())
-        {
-            Teacher teacher = new Teacher(teacherInput.next());
-            int subjectCount = teacherInput.nextInt();
-            for (int i = 0; i < subjectCount; i++) {
-                String subjectname = teacherInput.next();
-                Subject subject = findSubjectByName(subjectname);
-                if (subject == null)
-                    throw new Exception("No Subject found with the name : " + subjectname);
-                teacher.addSubject(subject);
-                subject.addTeacher(teacher);
-            }
-            teachers.add(teacher);
-        }
-        teacherInput.close();
-    }
-    private void initLectures() throws Exception {
-        Scanner lecInput = new Scanner(new File("Lectures.txt"));
-        while (lecInput.hasNext()){
-            String lecname = lecInput.next();
-            String teachername = lecInput.next();
-            Teacher supervisor = findTeacherByName(teachername);
-            if (supervisor == null)
-                throw new Exception("No Teacher found with the name : " + teachername);
-            Lecture lec = new Lecture(lecname,supervisor);
-            int lectureCount = lecInput.nextInt();
-            for (int i = 0; i < lectureCount; i++) {
-                String subjectname = lecInput.next();
-                Subject sub = findSubjectByName(subjectname);
-                if (sub == null)
-                    throw new Exception("No Subject found with the name : " + subjectname);
-                lec.addSubject(sub);
-            }
-            lectures.add(lec);
-        }
-        lecInput.close();
-    }
-
-    //Find Methods
-    private Subject findSubjectByName(String name) {
-        for(Subject sub:subjects)
-            if(sub.getName().equals(name))
-                return sub;
-        return null;
-    }
-    private Teacher findTeacherByName(String name){
-        for(Teacher teacher:teachers)
-            if(teacher.getName().equals(name))
-                return teacher;
-        return null;
-    }
     private TimePart getLastTimePart() { return parts.get(parts.size() - 1);  }
-
     //Print methods
     private void printTeachers()
     {
@@ -174,5 +100,7 @@ public class Schedule {
         }
         return new ScheduleOutput(parts);
     }
+
+
 
 }
