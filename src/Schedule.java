@@ -64,8 +64,7 @@ public class Schedule {
     ScheduleOutput solve() {
         int _day = 1;
         int _part = 1;
-        TimePart curPart = new TimePart(_day,_part);
-        parts.add(curPart);
+        parts.add(new TimePart(_day,_part));
         while(true)
         {
             ArrayList<Lecture> notAssigned = unAssignedLectures();
@@ -73,17 +72,11 @@ public class Schedule {
                 System.out.println("Problem Solved");
                 break;
             }
-            PriorityQueue<Teacher> FreeTeachers = calculateFreeTeachers();
-            Lecture lect = FindPossibleMatching(notAssigned,FreeTeachers);
+            Lecture lect = FindPossibleMatching(notAssigned,calculateFreeTeachers());
             if (lect == null)
-                {
-                    curPart = TimePart.next(curPart);
-                    parts.add(curPart);
-                }
+                parts.add(TimePart.next(getLastTimePart()));
             else
-            {
                 getLastTimePart().addLecture(lect);
-            }
         }
         return new ScheduleOutput(parts);
     }

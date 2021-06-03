@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Small refactorings...">
+    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Small refactorings... (Removing unnecessary imports and functions)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AiCa3A 2/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AiCa3A 2/Teacher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
     </list>
     <ignored path="AiCa3A 2.iws" />
@@ -69,26 +70,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="java" value="14494" />
-          <entry key="txt" value="1454" />
+          <entry key="java" value="14566" />
+          <entry key="txt" value="1504" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14494" />
-          <entry key="PLAIN_TEXT" value="1457" />
+          <entry key="JAVA" value="14566" />
+          <entry key="PLAIN_TEXT" value="1507" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="java" value="98" />
+          <entry key="java" value="99" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="98" />
+          <entry key="JAVA" value="99" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -111,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScheduleOutput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="621">
+              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#425#426#0" expanded="true" />
@@ -125,29 +126,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="210">
+              <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#unAssignedLectures#0;class#Schedule#0" />
                 <element signature="method#FindPossibleMatching#0;class#Schedule#0" />
                 <element signature="method#findExperts#0;class#Schedule#0" />
                 <element signature="method#calculateBusyTeachers#0;class#Schedule#0" />
-                <element signature="method#calculateFreeTeachers#0;class#Schedule#0" />
-                <element signature="method#solve#0;class#Schedule#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Subject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state relative-caret-position="-78">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ScheduleInput#0;class#ScheduleInput#0" />
@@ -230,10 +240,10 @@
         <option value="$PROJECT_DIR$/src/Subject.java" />
         <option value="$PROJECT_DIR$/src/TimePart.java" />
         <option value="$PROJECT_DIR$/src/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/ScheduleOutput.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/ScheduleInput.java" />
+        <option value="$PROJECT_DIR$/src/ScheduleOutput.java" />
         <option value="$PROJECT_DIR$/src/Schedule.java" />
       </list>
     </option>
@@ -280,7 +290,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622762219347" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622762775099" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -552,7 +562,7 @@
       <workItem from="1622528478263" duration="2088000" />
       <workItem from="1622551088046" duration="7816000" />
       <workItem from="1622630495904" duration="23723000" />
-      <workItem from="1622759571294" duration="2596000" />
+      <workItem from="1622759571294" duration="3142000" />
     </task>
     <task id="LOCAL-00001" summary="Change public accesses to private, adding getter , small renames">
       <created>1622478746286</created>
@@ -694,17 +704,24 @@
       <option name="project" value="LOCAL" />
       <updated>1622762155197</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Small refactorings... (Removing unnecessary imports and functions)">
+      <created>1622762278589</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1622762278589</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52876000" />
+    <option name="totallyTimeSpent" value="53422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -713,7 +730,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.496875" visible="true" weight="0.41654357" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496875" visible="true" weight="0.41654357" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988183" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -762,7 +779,8 @@
     <MESSAGE value="Remove unnecessary imports" />
     <MESSAGE value="Adding ScheduleInput Class" />
     <MESSAGE value="Small refactorings..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Small refactorings..." />
+    <MESSAGE value="Small refactorings... (Removing unnecessary imports and functions)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small refactorings... (Removing unnecessary imports and functions)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -872,16 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleOutput.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -906,10 +914,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ScheduleInput#0;class#ScheduleInput#0" />
+            <element signature="method#InitLists#0;class#ScheduleInput#0" />
+            <element signature="method#InitAllFromFiles#0;class#ScheduleInput#0" />
+            <element signature="method#initSubjectsFromFile#0;class#ScheduleInput#0" />
+            <element signature="method#initTeachers#0;class#ScheduleInput#0" />
+            <element signature="method#initLectures#0;class#ScheduleInput#0" />
+            <element signature="method#findSubjectByName#0;class#ScheduleInput#0" />
+            <element signature="method#findTeacherByName#0;class#ScheduleInput#0" />
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3502#3503#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3676#3677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="621">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#425#426#0" expanded="true" />
@@ -930,40 +972,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#unAssignedLectures#0;class#Schedule#0" />
             <element signature="method#FindPossibleMatching#0;class#Schedule#0" />
             <element signature="method#findExperts#0;class#Schedule#0" />
             <element signature="method#calculateBusyTeachers#0;class#Schedule#0" />
-            <element signature="method#calculateFreeTeachers#0;class#Schedule#0" />
-            <element signature="method#solve#0;class#Schedule#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ScheduleInput#0;class#ScheduleInput#0" />
-            <element signature="method#InitLists#0;class#ScheduleInput#0" />
-            <element signature="method#InitAllFromFiles#0;class#ScheduleInput#0" />
-            <element signature="method#initSubjectsFromFile#0;class#ScheduleInput#0" />
-            <element signature="method#initTeachers#0;class#ScheduleInput#0" />
-            <element signature="method#initLectures#0;class#ScheduleInput#0" />
-            <element signature="method#findSubjectByName#0;class#ScheduleInput#0" />
-            <element signature="method#findTeacherByName#0;class#ScheduleInput#0" />
-            <element signature="e#3454#3455#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3628#3629#0" expanded="true" />
-            <element signature="e#3676#3677#0" expanded="true" />
           </folding>
         </state>
       </provider>
