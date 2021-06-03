@@ -24,10 +24,10 @@ class ScheduleOutput {
     {
         System.out.println(resultInfo());
     }
-    void writeToFile()
+    void writeToFile(String file_addr)
     {
         try {
-            PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(new File("Sample Output.txt"))));
+            PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(new File(file_addr))));
             out.print(resultInfo());
             out.flush();
             System.out.println("File generated successfully");
@@ -35,18 +35,18 @@ class ScheduleOutput {
             e.printStackTrace();
         }
     }
-    void exportExcel()
+    void exportExcel(String file_addr)
     {
         try {
-            makeExcel((parts));
+            makeExcel(file_addr);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-    private void makeExcel(List<TimePart> parts) throws IOException {
+    private void makeExcel(String file_addr) throws IOException {
         //TODO : use correct outputs;
-        String exportAdr = "Schedule.xls";
+        String exportAdr = file_addr;
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
 
