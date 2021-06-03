@@ -12,7 +12,7 @@ public class Main {
         Schedule schedule = new Schedule(scheduleInput);
         ScheduleOutput output = schedule.GreedySolve();
         output.printResult();
-        output.writeToFile("Sample Output.txt");
+        output.writeToFile("Output.txt");
         output.exportExcel("Schedule.xls");
     }
 }
