@@ -10,7 +10,7 @@ public class Main {
 
         ScheduleInput scheduleInput = new ScheduleInput(TEACHERS_FILE_ADDR,SUBJECTS_FILE_ADDR,LECTURES_FILE_ADDR);
         Schedule schedule = new Schedule(scheduleInput);
-        ScheduleOutput output = schedule.solve();
+        ScheduleOutput output = schedule.GreedySolve();
         output.printResult();
         output.writeToFile();
         output.exportExcel();

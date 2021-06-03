@@ -61,7 +61,7 @@ public class Schedule {
         }
         return freeTeachers;
     }
-    ScheduleOutput solve() {
+    ScheduleOutput GreedySolve() {
         int _day = 1;
         int _part = 1;
         parts.add(new TimePart(_day,_part));
