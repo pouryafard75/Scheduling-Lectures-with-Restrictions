@@ -8,16 +8,18 @@ public class ScheduleInput {
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
 
-    ScheduleInput(String teachers_filename , String subjects_filename, String lectures_filename)
-    {
-        lectures = new ArrayList<>();
-        teachers = new ArrayList<>();
-        subjects = new ArrayList<>();
+    ScheduleInput(String teachers_filename , String subjects_filename, String lectures_filename) {
+        InitLists();
         try {
             InitAllFromFiles(teachers_filename,subjects_filename,lectures_filename);
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    private void InitLists() {
+        lectures = new ArrayList<>();
+        teachers = new ArrayList<>();
+        subjects = new ArrayList<>();
     }
     private void InitAllFromFiles(String teachers_filename , String subjects_filename, String lectures_filename) throws Exception {
         initSubjectsFromFile(subjects_filename);
@@ -85,16 +87,14 @@ public class ScheduleInput {
         return null;
     }
 
+    //Getters
     ArrayList<Lecture> getLectures() {
-        return new ArrayList<>(lectures);
+        return lectures;
     }
     ArrayList<Teacher> getTeachers() {
-        return new ArrayList<>(teachers);
+        return teachers;
     }
     ArrayList<Subject> getSubjects() {
-        return new ArrayList<>(subjects);
+        return subjects;
     }
-
-
-
 }

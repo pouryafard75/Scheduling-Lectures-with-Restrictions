@@ -9,7 +9,7 @@ public class Schedule {
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
     private ArrayList<TimePart> parts;
-    private ScheduleOutput scheduleOutput;
+
     Schedule(ScheduleInput scheduleInput) {
         lectures = scheduleInput.getLectures();
         teachers = scheduleInput.getTeachers();
