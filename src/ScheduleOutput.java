@@ -45,7 +45,6 @@ class ScheduleOutput {
     }
     private void makeExcel(String file_addr) throws IOException {
         //TODO : use correct outputs;
-        String exportAdr = file_addr;
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
 
@@ -73,7 +72,7 @@ class ScheduleOutput {
         }
         for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
             daysSheet.autoSizeColumn(curPart);
-        FileOutputStream outputFile = new FileOutputStream(exportAdr);
+        FileOutputStream outputFile = new FileOutputStream(file_addr);
         workbook.write(outputFile);
         outputFile.close();
         System.out.println("ExcelGen successfully generated!");
