@@ -2,8 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class ScheduleInput {
+class ScheduleInput {
     private ArrayList<Lecture> lectures;
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;

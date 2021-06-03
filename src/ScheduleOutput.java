@@ -3,12 +3,10 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellStyle;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-public class ScheduleOutput {
+class ScheduleOutput {
     private ArrayList<TimePart> parts;
     ScheduleOutput(ArrayList<TimePart> tp)
     {
@@ -81,5 +79,4 @@ public class ScheduleOutput {
         outputFile.close();
         System.out.println("ExcelGen successfully generated!");
     }
-
 }

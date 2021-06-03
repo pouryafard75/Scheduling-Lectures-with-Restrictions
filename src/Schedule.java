@@ -1,6 +1,4 @@
-import java.io.*;
 import java.util.*;
-
 /**
  * Created by pouryafard on 1/15/2017 AD.
  */
@@ -9,7 +7,6 @@ public class Schedule {
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
     private ArrayList<TimePart> parts;
-
     Schedule(ScheduleInput scheduleInput) {
         lectures = scheduleInput.getLectures();
         teachers = scheduleInput.getTeachers();
@@ -17,16 +14,6 @@ public class Schedule {
         parts = new ArrayList<>();
     }
     private TimePart getLastTimePart() { return parts.get(parts.size() - 1);  }
-    //Print methods
-    private void printTeachers()
-    {
-        for (Teacher t1: teachers) System.out.println(t1.getName());
-    }
-    private void printLectures() {
-        for (Lecture l:  lectures)
-            System.out.println(l);
-    }
-
     private ArrayList<Lecture> unAssignedLectures() {
         ArrayList<Lecture> unassigned = new ArrayList<>();
         for(Lecture lec:lectures)
@@ -100,7 +87,4 @@ public class Schedule {
         }
         return new ScheduleOutput(parts);
     }
-
-
-
 }
