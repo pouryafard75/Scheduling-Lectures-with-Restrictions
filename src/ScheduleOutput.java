@@ -75,6 +75,6 @@ class ScheduleOutput {
         FileOutputStream outputFile = new FileOutputStream(file_addr);
         workbook.write(outputFile);
         outputFile.close();
-        System.out.println("ExcelGen successfully generated!");
+        System.out.println("Excel successfully generated!");
     }
 }
