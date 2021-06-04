@@ -1,4 +1,4 @@
-# Constraint satisfaction Scheduling
+# Constraint satisfaction Scheduling (Greedy Approach)
 
 There are plenty of lectures and professors. Your mission is to find the best scheduling plan with  the minimum amount of time to have all lectures held with supervisor and refereers. But there are some restrications in terms of choosing refeeres.
 
@@ -76,4 +76,4 @@ The excel file will be like:
 Algorithm
 </b> </i>
 
-The algorithms will create and fill a priorityqueue with teachers called possibleTeachers. The teacher with the less number of expertise will come at the first of the queue. Then we iterate through lectures. By having this approach, we designate the less accomplished professors at first and while the algorithms continues we have teachers who are more versatile.
+The algorithms will create and fill a priorityqueue with teachers called possibleTeachers. The teacher with the less number of expertise will come at the first of the queue. Then we iterate through lectures. By having this approach, we designate the less accomplished professors at first and while the algorithms continues we have teachers who are more versatile.(Greedy Approach)
