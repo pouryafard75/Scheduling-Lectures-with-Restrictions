@@ -1,11 +1,7 @@
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
-
-
 import java.io.*;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Iterator;
 
