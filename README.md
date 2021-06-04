@@ -36,7 +36,8 @@ Remember you are not supposed to cover all related topics to a lecture by design
 And also remember lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is held simultaneously; The professor cant be at two different lectures at the same time.
 ## Output
 When the scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
-<img width="1169" alt="image" src="https://user-images.githubusercontent.com/28820932/120727389-a6d2e900-c4ef-11eb-9cfd-8140618e3668.png">
+<img width="1169" alt="image" src= <img width="911" alt="image" src="https://user-images.githubusercontent.com/28820932/120727439-c9fd9880-c4ef-11eb-8930-0e221d11aee8.png">
+
 
 
 ## Algorithm
