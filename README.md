@@ -51,6 +51,6 @@ HE <br>
 
 In the example aforementioned, there are two different professors. The first one, Dr.Shamsfard has 2 expertise, NLP and AI. The next professor Dr.Moayeri has also two other expertise namely VLSI and HE.
 Remember you are not supposed to cover all related topics to a lecture by designated referees. The project goal is to assign two referees who are proficient in one of the lecture's topics. 
-And also remember lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is held simultaneously; The professor cant be at two different lectures at the same time.
+And also remember lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is being held simultaneously; The professor cant be at two different lectures at the same time.
 ## Algorithm
 The algorithms will create and fill a priority queue with teachers called possible teachers. The teacher with less expertise will come at the first of the queue. Then we iterate through lectures. By having this approach, we designate the less accomplished professors at first and while the algorithms continue we have more versatile teachers.(Greedy Approach)
