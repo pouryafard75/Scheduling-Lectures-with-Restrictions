@@ -12,7 +12,7 @@ For a more detailed output, it will generate an excel file which contains all th
 Day 1, part 1:  <br>
 lec1 | Supervisor : Dr.Shamsfard | Referees : Dr.Ebrahimmoghadam , Dr.Talebpour <br>
 lec11 | Supervisor : Dr.Shams | Referees : Dr.Vahidi , Dr.Haghighi <br>
-Day 1, part 2: 
+Day 1, part 2: <br> 
 lec4 | Supervisor : Dr.Neshati | Referees : Dr.Mahmoudi , Dr.Ebrahimmoghadam <br>
 lec5 | Supervisor : Dr.Shekofteh | Referees : Dr.Shamsfard , Dr.Talebpour <br>
 lec7 | Supervisor : Dr.Ghasemian | Referees : Dr.Abbaspour , Dr.Moayeri <br>
