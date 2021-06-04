@@ -21,6 +21,7 @@ lec7 | Supervisor : Dr.Ghasemian | Referees : Dr.Abbaspour , Dr.Moayeri <br>
 You will be given 3 different files namely Lectures.txt, Subjects.txt, Teachers.txt
 ### Lectures.txt 
 This file has information about all the lectures which should be held. For each lecture, the name of the lecture, name of the associated professor, number of topics that are related to the lecture, and topic's names are indicated. Example: 
+
 lec1  <br>
 Dr.Shamsfard <br> 
 3 <br> 
@@ -38,6 +39,7 @@ The example mentioned above has two different lectures. The first lecture which 
 This file was created to cover all different topics' names. In order to have a full dictionary in terms of topics, you can use this file.
 ### Teachers.txt 
 Since you have to assign a related professor for each lecture, you need to have information about professor areas. Every professor is accomplished in a specific field(s). In this file, the number of expertise each professor posses, and the name of their expertise are indicated in the following format: 
+
 Dr.Shamsfard <br>
 2 <br>
 NLP <br>
