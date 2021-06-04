@@ -3,7 +3,7 @@
 There are plenty of lectures and professors. Your mission is to find the best scheduling plan with the minimum amount of time to have all lectures held with a supervisor and referees. But there are some restrictions in terms of choosing referees.
 The goal is to assign two referees to each lecture and try to minimize the number of time parts(each day has 4 different time parts) which is needed to have all lectures held. Referees must be experts at least in one of the lecture's topics. Each day has 4 different timeframes(time parts) which are allowed to have a lecture held. You can have multiple lectures held at the same time once you designate free related professors to every lecture. A free professor means a professor who is not present at any other lectures (as supervisor or referee) at the same time. A related professor means a professor who has expertise in lecture's related topics.
 Each lecture has a supervisor which is indicated in the lecture information and has a specific topic. Also, each professor has expertise in a particular field(s).
-## Output
+# Output
 When the scheduling algorithm finishes, it will print the best plan it has found. For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
 <img width="1169" alt="image" src="https://user-images.githubusercontent.com/28820932/120727439-c9fd9880-c4ef-11eb-8930-0e221d11aee8.png">
 # Input
