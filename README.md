@@ -5,10 +5,10 @@ The goal is to assign two referees to each lecture and try to minimize the numbe
 Each lecture has a supervisor which is indicated in the lecture information and has a specific topic. Also, each professor has expertise in a particular field(s).
 ## Output
 When the scheduling algorithm finishes, you can get the reuslts in different formats:
-### Excel:
+### Excel
 For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
 <img width="1169" alt="image" src="https://user-images.githubusercontent.com/28820932/120727439-c9fd9880-c4ef-11eb-8930-0e221d11aee8.png">
-### Raw text:
+### Raw text
 Day 1, part 1: 
 lec1 | Supervisor : Dr.Shamsfard | Referees : Dr.Ebrahimmoghadam , Dr.Talebpour , 
 lec11 | Supervisor : Dr.Shams | Referees : Dr.Vahidi , Dr.Haghighi , 
