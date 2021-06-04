@@ -1,10 +1,14 @@
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
+
+
 import java.io.*;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 class ScheduleOutput {
     private ArrayList<TimePart> parts;
     ScheduleOutput(ArrayList<TimePart> tp)
@@ -13,15 +17,18 @@ class ScheduleOutput {
     }
     private String resultInfo() {
         StringBuilder result = new StringBuilder();
-        for ( TimePart tp: parts) {
+        for (TimePart tp :parts) {
             result.append(tp.info()).append(": ").append("\n");
-            for (Lecture l : tp.getLectures()) result.append(l.toString()).append("\n");
+            for (Lecture lect : tp.getLectures()) {
+                result.append(lect.toString());
+                result.append("\n");
+            }
         }
         return result.toString();
     }
     void printResult()
     {
-        System.out.println(resultInfo());
+        System.out.print(resultInfo());
     }
     void writeToFile(String file_addr)
     {
@@ -49,22 +56,44 @@ class ScheduleOutput {
         HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
 
         HSSFRow row = daysSheet.createRow(0);
-        for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++)
-            row.createCell(curPart).setCellValue("Part " + curPart);
+        CellStyle parts_style = workbook.createCellStyle();
+        parts_style.setFillForegroundColor(IndexedColors.LIGHT_BLUE.getIndex());
+        parts_style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        CellStyle days_style = workbook.createCellStyle();
+        days_style.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+        days_style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+
+        for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++) {
+            HSSFCell cell = row.createCell(curPart);
+            cell.setCellValue("Part " + curPart);
+            cell.setCellStyle(parts_style);
+        }
         for (int curday = 1; curday <= parts.get(parts.size() - 1).getDay(); curday++) {
             row = daysSheet.createRow(curday);
-            row.createCell(0).setCellValue("Day" + curday);
+            HSSFCell days_cell = row.createCell(0);
+            days_cell.setCellValue("Day" + curday);
+            days_cell.setCellStyle(days_style);
             for (int curPart = 1; curPart <= TimePart.PARTS_PER_DAY; curPart++) {
                 StringBuilder stringBuilder = new StringBuilder();
                 for (TimePart tp : parts) {
                     if (tp.getDay() == curday && tp.getPart() == curPart) {
-                        for (Lecture lecture : tp.getLectures())
-                            stringBuilder.append(lecture.toString()).append("\n\n");
+                        Iterator<Lecture> iterator = tp.getLectures().iterator();
+                        while (iterator.hasNext())
+                        {
+                            Lecture lecture = iterator.next();
+                            stringBuilder.append(lecture.toString());
+                            if (iterator.hasNext())
+                            {
+                                    stringBuilder.append("\n");
+                            }
+                        }
                     }
                 }
                 HSSFCell cell = row.createCell(curPart);
                 cell.setCellValue(stringBuilder.toString());
                 CellStyle style = workbook.createCellStyle();
+                style.setAlignment(CellStyle.ALIGN_CENTER);
+                style.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
                 style.setWrapText(true);
                 cell.setCellStyle(style);
 

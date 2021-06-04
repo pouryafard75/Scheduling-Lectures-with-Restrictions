@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -50,8 +51,13 @@ public class Lecture {
         result.append(" | Supervisor : ");
         result.append(getSupervisor().getName());
         result.append(" | Referees : " );
-        for (Teacher t : getReferees()) {
-            result.append(t.getName()).append(" , ");
+        Iterator<Teacher> iterator = getReferees().iterator();
+        while(iterator.hasNext())
+        {
+            Teacher t = iterator.next();
+            result.append(t.getName());
+            if (iterator.hasNext())
+                result.append(", ");
         }
         return result.toString();
     }
