@@ -46,6 +46,7 @@ Dr.Moayeri <br>
 2 <br>
 VLSI <br>
 HE <br>
+
 In the example aforementioned, there are two different professors. The first one, Dr.Shamsfard has 2 expertise, NLP and AI. The next professor Dr.Moayeri has also two other expertise namely VLSI and HE.
 Remember you are not supposed to cover all related topics to a lecture by designated referees. The project goal is to assign two referees who are proficient in one of the lecture's topics. 
 And also remember lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is held simultaneously; The professor cant be at two different lectures at the same time.
