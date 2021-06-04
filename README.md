@@ -9,42 +9,43 @@ When the scheduling algorithm finishes, you can get the reuslts in different for
 For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
 <img width="1240" alt="image" src="https://user-images.githubusercontent.com/28820932/120730136-0b914200-c4f6-11eb-8066-920495d21afa.png">
 ### Raw text
-Day 1, part 1: 
-lec1 | Supervisor : Dr.Shamsfard | Referees : Dr.Ebrahimmoghadam , Dr.Talebpour , 
-lec11 | Supervisor : Dr.Shams | Referees : Dr.Vahidi , Dr.Haghighi , 
+Day 1, part 1:  <br>
+lec1 | Supervisor : Dr.Shamsfard | Referees : Dr.Ebrahimmoghadam , Dr.Talebpour <br>
+lec11 | Supervisor : Dr.Shams | Referees : Dr.Vahidi , Dr.Haghighi <br>
 Day 1, part 2: 
-lec4 | Supervisor : Dr.Neshati | Referees : Dr.Mahmoudi , Dr.Ebrahimmoghadam , 
-lec5 | Supervisor : Dr.Shekofteh | Referees : Dr.Shamsfard , Dr.Talebpour , 
-lec7 | Supervisor : Dr.Ghasemian | Referees : Dr.Abbaspour , Dr.Moayeri , 
+lec4 | Supervisor : Dr.Neshati | Referees : Dr.Mahmoudi , Dr.Ebrahimmoghadam <br>
+lec5 | Supervisor : Dr.Shekofteh | Referees : Dr.Shamsfard , Dr.Talebpour <br>
+lec7 | Supervisor : Dr.Ghasemian | Referees : Dr.Abbaspour , Dr.Moayeri <br>
 .....
 ## Input
 You will be given 3 different files namely Lectures.txt, Subjects.txt, Teachers.txt
 ### Lectures.txt 
 This file has information about all the lectures which should be held. For each lecture, the name of the lecture, name of the associated professor, number of topics that are related to the lecture, and topic's names are indicated. Example: 
-lec1 
-Dr.Shamsfard 
-3 
-NLP 
-DIP 
-DM  
-lec2 
-Dr.Haghighi 
-2 
-SE 
-Net 
+lec1  <br>
+Dr.Shamsfard <br> 
+3 <br> 
+NLP <br> 
+DIP <br>
+DM  <br>
+lec2 <br>
+Dr.Haghighi <br>
+2 <br>
+SE <br>
+Net <br>
+
 The example mentioned above has two different lectures. The first lecture which is lec1 has Dr.Shamsfard as the supervisor and focuses on 3 different topics which are NLP, DIP, DM. For the second lecture which is lec2, we have Dr.Haghighi as the supervisor and the lecture is related to 2 topics namely SE and Net.
 ### Subjects.txt 
 This file was created to cover all different topics' names. In order to have a full dictionary in terms of topics, you can use this file.
 ### Teachers.txt 
 Since you have to assign a related professor for each lecture, you need to have information about professor areas. Every professor is accomplished in a specific field(s). In this file, the number of expertise each professor posses, and the name of their expertise are indicated in the following format: 
-Dr.Shamsfard 
-2 
-NLP 
-AI 
-Dr.Moayeri 
-2 
-VLSI 
-HE 
+Dr.Shamsfard <br>
+2 <br>
+NLP <br>
+AI <br>
+Dr.Moayeri <br>
+2 <br>
+VLSI <br>
+HE <br>
 In the example aforementioned, there are two different professors. The first one, Dr.Shamsfard has 2 expertise, NLP and AI. The next professor Dr.Moayeri has also two other expertise namely VLSI and HE.
 Remember you are not supposed to cover all related topics to a lecture by designated referees. The project goal is to assign two referees who are proficient in one of the lecture's topics. 
 And also remember lecture's supervisor is fixed. You can not assign the supervisor as a referee in another lecture that is held simultaneously; The professor cant be at two different lectures at the same time.
