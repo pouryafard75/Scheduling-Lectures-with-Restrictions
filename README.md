@@ -6,7 +6,7 @@ Each lecture has a supervisor which is indicated in the lecture information and 
 ## Output
 When the scheduling algorithm finishes, you can get the reuslts in different formats:
 ### Excel
-For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
+For a more detailed output, it will generate an excel file which contains all the information needed. The excel file will be like this:
 <img width="1240" alt="image" src="https://user-images.githubusercontent.com/28820932/120730136-0b914200-c4f6-11eb-8066-920495d21afa.png">
 ### Raw text
 Day 1, part 1:  <br>
