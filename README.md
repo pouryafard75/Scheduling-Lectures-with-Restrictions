@@ -7,7 +7,7 @@ Each lecture has a supervisor which is indicated in the lecture information and 
 When the scheduling algorithm finishes, you can get the reuslts in different formats:
 ### Excel
 For a more detailed output, it will generate an excel file Schedule.xls which contains all the information needed. The excel file will be like this:
-<img width="1169" alt="image" src="https://user-images.githubusercontent.com/28820932/120727439-c9fd9880-c4ef-11eb-8930-0e221d11aee8.png">
+<img width="1240" alt="image" src="https://user-images.githubusercontent.com/28820932/120730136-0b914200-c4f6-11eb-8066-920495d21afa.png">
 ### Raw text
 Day 1, part 1: 
 lec1 | Supervisor : Dr.Shamsfard | Referees : Dr.Ebrahimmoghadam , Dr.Talebpour , 
