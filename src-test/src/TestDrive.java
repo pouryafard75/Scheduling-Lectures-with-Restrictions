@@ -14,7 +14,13 @@ public class TestDrive {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        scheduleInput.printAllInfo();
+        Schedule greedy = new GreedyAlgorithm(scheduleInput);
+        ScheduleOutput scheduleOutput = greedy.solve();
+
+
+        scheduleOutput.printResult();
+        System.out.println(greedy.resultFitness());
+
 
 
     }

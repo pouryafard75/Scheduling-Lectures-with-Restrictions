@@ -11,6 +11,7 @@ class GreedyAlgorithm extends Schedule {
     private Lecture FindPossibleMatching(ArrayList<Lecture> notAssigned, PriorityQueue<Teacher> possibleTeachers) {
 
         for (Lecture lecture: notAssigned) {
+            if (!possibleTeachers.contains(lecture.getSupervisor())) continue;
             Set<Teacher> experts = new HashSet<>();
             for (Subject subject : lecture.getSubjects())
                 experts.addAll(findExperts(subject, possibleTeachers));

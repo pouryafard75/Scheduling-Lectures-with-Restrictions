@@ -77,4 +77,8 @@ public abstract class Schedule {
         return freeTeachers;
     }
     abstract ScheduleOutput solve();
+    int resultFitness()
+    {
+        return TimePart.numberOfParts(getLastTimePart());
+    }
 }

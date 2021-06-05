@@ -42,4 +42,8 @@ public class TimePart {
         if (input.getPart() >= PARTS_PER_DAY) return new TimePart(input.getDay() + 1,1);
         return new TimePart(input.getDay(),input.getPart()+1);
     }
+    static int numberOfParts(TimePart input)
+    {
+        return input.getPart() + (input.getDay()-1) * PARTS_PER_DAY;
+    }
 }
