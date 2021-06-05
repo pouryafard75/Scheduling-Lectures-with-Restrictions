@@ -25,13 +25,13 @@ public class Schedule {
 
         for (Lecture lecture: notAssigned) {
             Set<Teacher> experts = new HashSet<>();
-            for (Subject sub : lecture.getSubjects())
-                experts.addAll(findExperts(sub, possibleTeachers));
+            for (Subject subject : lecture.getSubjects())
+                experts.addAll(findExperts(subject, possibleTeachers));
             experts.remove(lecture.getSupervisor());
             if (experts.size() >= 2) {
-                Iterator<Teacher> it = experts.iterator();
-                lecture.addReferee(it.next());
-                lecture.addReferee(it.next());
+                Iterator<Teacher> iterator = experts.iterator();
+                lecture.addReferee(iterator.next());
+                lecture.addReferee(iterator.next());
                 return lecture;
             }
         }
@@ -57,8 +57,8 @@ public class Schedule {
     private PriorityQueue<Teacher> calculateFreeTeachers() {
         PriorityQueue<Teacher> freeTeachers = new PriorityQueue<>(Comparator.comparingInt(Teacher::getSubjectsSize));
         Set<Teacher> busyTeachers = calculateBusyTeachers();
-        for (Teacher t : teachers) {
-            if (!busyTeachers.contains(t)) freeTeachers.add(t);
+        for (Teacher teacher : teachers) {
+            if (!busyTeachers.contains(teacher)) freeTeachers.add(teacher);
         }
         return freeTeachers;
     }

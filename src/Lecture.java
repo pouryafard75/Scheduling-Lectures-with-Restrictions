@@ -54,8 +54,8 @@ public class Lecture {
         Iterator<Teacher> iterator = getReferees().iterator();
         while(iterator.hasNext())
         {
-            Teacher t = iterator.next();
-            result.append(t.getName());
+            Teacher teacher = iterator.next();
+            result.append(teacher.getName());
             if (iterator.hasNext())
                 result.append(", ");
         }

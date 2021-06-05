@@ -15,8 +15,8 @@ public class Subject {
     {
         return name;
     }
-    void addTeacher(Teacher t1)
+    void addTeacher(Teacher teacher)
     {
-        teachers.add(t1);
+        teachers.add(teacher);
     }
 }

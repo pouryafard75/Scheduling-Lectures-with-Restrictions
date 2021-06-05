@@ -26,8 +26,8 @@ class Teacher {
     {
         return subjects.size();
     }
-    void addSubject(Subject s)
+    void addSubject(Subject subject)
     {
-        subjects.add(s);
+        subjects.add(subject);
     }
 }
