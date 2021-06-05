@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Removing blank lines.">
+    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Variable names improved">
+      <change afterPath="$PROJECT_DIR$/src-test/src-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-test/src/TestDrive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-test/src/TestUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GreedyAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lecture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lecture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScheduleInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScheduleInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScheduleOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScheduleOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimePart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimePart.java" afterDir="false" />
     </list>
     <ignored path="AiCa3A 2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,31 +80,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="3" />
-          <entry key="java" value="15625" />
-          <entry key="txt" value="1784" />
+          <entry key="dummy" value="12" />
+          <entry key="java" value="17377" />
+          <entry key="txt" value="1861" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15625" />
-          <entry key="PLAIN_TEXT" value="1787" />
+          <entry key="JAVA" value="17377" />
+          <entry key="PLAIN_TEXT" value="1873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="class" value="1" />
-          <entry key="java" value="136" />
+          <entry key="class" value="2" />
+          <entry key="java" value="155" />
           <entry key="md" value="3" />
+          <entry key="php" value="2" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="136" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="155" />
           <entry key="Markdown" value="3" />
+          <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -108,13 +117,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="156">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding>
-                <element signature="method#findExperts#0;class#Schedule#0" />
+                <element signature="e#268#269#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GreedyAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TimePart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,17 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lecture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -149,7 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Shams</find>
       <find>Hag</find>
       <find>Vahi</find>
       <find>Sample out</find>
@@ -179,6 +212,7 @@
       <find>system</find>
       <find>printResult</find>
       <find>resultInfo</find>
+      <find>getLec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,14 +230,21 @@
         <option value="$PROJECT_DIR$/src/Excel.java" />
         <option value="$PROJECT_DIR$/src/ExcelGen.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/TimePart.java" />
-        <option value="$PROJECT_DIR$/src/ScheduleInput.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/ScheduleOutput.java" />
         <option value="$PROJECT_DIR$/src/Subject.java" />
         <option value="$PROJECT_DIR$/src/Teacher.java" />
         <option value="$PROJECT_DIR$/src/Lecture.java" />
+        <option value="$PROJECT_DIR$/src/ScheduleInput.java" />
+        <option value="$PROJECT_DIR$/src-test/src/TestDrive.java" />
+        <option value="$PROJECT_DIR$/src-test/src/TestUnit.java" />
+        <option value="$PROJECT_DIR$/src/test.java" />
+        <option value="$PROJECT_DIR$/src/Super.java" />
+        <option value="$PROJECT_DIR$/src/ScheduleUtils.java" />
+        <option value="$PROJECT_DIR$/src/ScheduleAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/TimePart.java" />
+        <option value="$PROJECT_DIR$/src/GreedyAlgorithm.java" />
       </list>
     </option>
   </component>
@@ -238,6 +279,17 @@
               <item name="Scheduling-Lectures-with-Restrictions" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Scheduling-Lectures-with-Restrictions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scheduling-Lectures-with-Restrictions" type="462c0819:PsiDirectoryNode" />
+              <item name="src-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Scheduling-Lectures-with-Restrictions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scheduling-Lectures-with-Restrictions" type="462c0819:PsiDirectoryNode" />
+              <item name="src-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -247,10 +299,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622768855197" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622917019841" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -634,7 +692,7 @@
       <workItem from="1622630495904" duration="23723000" />
       <workItem from="1622759571294" duration="9114000" />
       <workItem from="1622806444567" duration="692000" />
-      <workItem from="1622899708344" duration="206000" />
+      <workItem from="1622899708344" duration="11270000" />
     </task>
     <task id="LOCAL-00001" summary="Change public accesses to private, adding getter , small renames">
       <created>1622478746286</created>
@@ -846,11 +904,18 @@
       <option name="project" value="LOCAL" />
       <updated>1622768847368</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Variable names improved">
+      <created>1622900003247</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1622900003247</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60292000" />
+    <option name="totallyTimeSpent" value="71356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="775" extended-state="0" />
@@ -870,7 +935,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3293944" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293944" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.503125" side_tool="true" weight="0.32270917" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.34121123" />
@@ -896,7 +961,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Schedule Class, new variable and methods added &#10;initializer improved" />
     <MESSAGE value="Logic prototype added to Schedule Solve method.&#10;TimePart next function &#10;isAssigned function for Lecture class" />
     <MESSAGE value="Function name changed FindPossibilites.&#10;Duplicated Code -&gt; New function as getLastTimePart" />
     <MESSAGE value="Completing the logic.&#10;Adding StringBuilding methods&#10;Removing some unnessary functions&#10;(TODO: EXCEL generation and removing static lists from classes)" />
@@ -921,7 +985,8 @@
     <MESSAGE value="Typo edited" />
     <MESSAGE value="Better output format(text and excel)" />
     <MESSAGE value="Removing blank lines." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing blank lines." />
+    <MESSAGE value="Variable names improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Variable names improved" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1005,20 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimePart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1036,13 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1053,29 +1097,209 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/TestUnit.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/TestDrive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lecture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/src/TestUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/src/TestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Super.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="156">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
-            <element signature="method#findExperts#0;class#Schedule#0" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimePart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GreedyAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>src-test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

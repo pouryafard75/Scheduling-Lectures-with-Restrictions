@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,6 +16,12 @@ class ScheduleInput {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    ScheduleInput(ArrayList<Lecture> lectures , ArrayList<Teacher> teachers, ArrayList<Subject> subjects)
+    {
+        this.lectures = lectures;
+        this.teachers = teachers;
+        this.subjects = subjects;
     }
     private void InitLists() {
         lectures = new ArrayList<>();

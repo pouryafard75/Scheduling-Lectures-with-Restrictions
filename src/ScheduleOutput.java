@@ -49,7 +49,7 @@ class ScheduleOutput {
     private void makeExcel(String file_addr) throws IOException {
         //TODO : use correct outputs;
         HSSFWorkbook workbook = new HSSFWorkbook();
-        HSSFSheet daysSheet = workbook.createSheet("Lectures Schedule");
+        HSSFSheet daysSheet = workbook.createSheet("Lectures ScheduleAlgorithm");
 
         HSSFRow row = daysSheet.createRow(0);
         CellStyle parts_style = workbook.createCellStyle();

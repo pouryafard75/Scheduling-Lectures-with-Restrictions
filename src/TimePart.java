@@ -37,6 +37,8 @@ public class TimePart {
 
     static TimePart next(TimePart input)
     {
+        if (input == null)
+            return new TimePart(1,1);
         if (input.getPart() >= PARTS_PER_DAY) return new TimePart(input.getDay() + 1,1);
         return new TimePart(input.getDay(),input.getPart()+1);
     }

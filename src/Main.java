@@ -9,11 +9,11 @@ public class Main {
         String LECTURES_FILE_ADDR = "Lectures.txt";
 
         ScheduleInput scheduleInput = new ScheduleInput(TEACHERS_FILE_ADDR,SUBJECTS_FILE_ADDR,LECTURES_FILE_ADDR);
-        Schedule schedule = new Schedule(scheduleInput);
-        ScheduleOutput output = schedule.GreedySolve();
+        Schedule schedule = new GreedyAlgorithm(scheduleInput);
+        ScheduleOutput output = schedule.solve();
         output.printResult();
         output.writeToFile("Output.txt");
-        output.exportExcel("Schedule.xls");
+        output.exportExcel("ScheduleAlgorithm.xls");
     }
 }
 
