@@ -9,6 +9,7 @@ class ScheduleInput {
     private ArrayList<Teacher> teachers;
     private ArrayList<Subject> subjects;
 
+
     ScheduleInput(String teachers_filename , String subjects_filename, String lectures_filename) {
         InitLists();
         try {
@@ -94,6 +95,15 @@ class ScheduleInput {
         return null;
     }
 
+    public void printAllInfo()
+    {
+        for (Subject subject :subjects)
+            System.out.println(subject);
+        for (Teacher teacher : teachers)
+            System.out.println(teacher);
+        for (Lecture lecture: lectures)
+            System.out.println(lecture);
+    }
     //Getters
     ArrayList<Lecture> getLectures() {
         return lectures;

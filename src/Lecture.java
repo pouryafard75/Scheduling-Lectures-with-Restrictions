@@ -61,4 +61,10 @@ public class Lecture {
         }
         return result.toString();
     }
+    String fileformat()
+    {
+        return name + "\n" +
+                name + supervisor.getName() + "\n" +
+                Subject.fileFormatSubjectList(subjects);
+    }
 }
