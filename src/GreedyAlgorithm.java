@@ -14,7 +14,7 @@ class GreedyAlgorithm extends Schedule {
             if (!possibleTeachers.contains(lecture.getSupervisor())) continue;
             Set<Teacher> experts = new HashSet<>();
             for (Subject subject : lecture.getSubjects())
-                experts.addAll(findExperts(subject, possibleTeachers));
+                experts.addAll(findExperts(subject, new HashSet<>(possibleTeachers)));
             experts.remove(lecture.getSupervisor());
             if (experts.size() >= 2) {
                 Iterator<Teacher> iterator = experts.iterator();

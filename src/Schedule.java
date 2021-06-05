@@ -26,6 +26,10 @@ public abstract class Schedule {
         return subjects;
     }
 
+    public void setParts(ArrayList<TimePart> parts) {
+        this.parts = parts;
+    }
+
     ArrayList<TimePart> getParts() {
         return parts;
     }
@@ -52,7 +56,7 @@ public abstract class Schedule {
             if (!lec.isAssigned()) unassigned.add(lec);
         return unassigned;
     }
-    Set<Teacher> findExperts(Subject sub, PriorityQueue<Teacher> possibleTeachers) {
+    Set<Teacher> findExperts(Subject sub, Set<Teacher> possibleTeachers) {
         Set<Teacher> result = new HashSet<>();
         for (Teacher t: possibleTeachers)
             if (t.isExpertInSubject(sub)) result.add(t);

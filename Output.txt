@@ -17,12 +17,13 @@ Day 1, part 4:
 lec8 | Supervisor : Dr.Shekofteh | Referees : Dr.Mahmoudi, Dr.Shamsfard
 lec9 | Supervisor : Dr.Abbaspour | Referees : Dr.Ghasemian, Dr.Mahdiani
 lec16 | Supervisor : Dr.Neshati | Referees : Dr.Vahidi, Dr.Haghighi
-lec20 | Supervisor : Dr.Vahidi | Referees : Dr.Ebrahimmoghadam, Dr.Talebpour
 Day 2, part 1: 
 lec10 | Supervisor : Dr.Shamsfard | Referees : Dr.Mahmoudi, Dr.Mahdiani
 lec13 | Supervisor : Dr.Moayeri | Referees : Dr.Ghasemian, Dr.Abbaspour
-lec17 | Supervisor : Dr.Abbaspour | Referees : Dr.Vahidi, Dr.Haghighi
-lec18 | Supervisor : Dr.Ebrahimmoghadam | Referees : Dr.Neshati, Dr.Shams
-lec22 | Supervisor : Dr.Mahmoudi | Referees : Dr.Shekofteh, Dr.Talebpour
+lec18 | Supervisor : Dr.Ebrahimmoghadam | Referees : Dr.Vahidi, Dr.Haghighi
+lec21 | Supervisor : Dr.Shekofteh | Referees : Dr.Neshati, Dr.Talebpour
 Day 2, part 2: 
-lec21 | Supervisor : Dr.Shekofteh | Referees : Dr.Mahmoudi, Dr.Vahidi
+lec17 | Supervisor : Dr.Abbaspour | Referees : Dr.Vahidi, Dr.Haghighi
+lec22 | Supervisor : Dr.Mahmoudi | Referees : Dr.Ebrahimmoghadam, Dr.Shamsfard
+Day 2, part 3: 
+lec20 | Supervisor : Dr.Vahidi | Referees : Dr.Mahmoudi, Dr.Haghighi

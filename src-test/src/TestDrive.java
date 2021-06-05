@@ -1,24 +1,23 @@
 import org.junit.Test;
-
-import java.io.*;
+import java.util.Random;
 
 public class TestDrive {
-
     @Test
     public static void main(String[] args) {
 
-        TestUnit test = new TestUnit(5,10, 10);
-        ScheduleInput scheduleInput = test.populate();
-        try {
-            test.writeToFile();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        Random rnd = new Random();
+        int testNumbers = 10;
+        int curTest = 0;
+        while(curTest < testNumbers)
+        {
+            int sub_count = (int) (rnd.nextFloat() * 10) + 5;
+            int teach_count = sub_count + (int) (rnd.nextFloat() * 10) + sub_count;
+            int lect_count = sub_count + teach_count + (int) (rnd.nextFloat() * 10) + 10;
+            TestUnit test = new TestUnit(sub_count,teach_count ,  lect_count);
+            Schedule schedule = new GreedyAlgorithm(test.populate());
+            Validator validator = new Validator(schedule.solve());
+            System.out.println(validator.checkValidation());
+            curTest ++;
         }
-        Schedule greedy = new GreedyAlgorithm(scheduleInput);
-        ScheduleOutput scheduleOutput = greedy.solve();
-        Validator validator = new Validator(scheduleOutput);
-        System.out.println(validator.checkValidation());
-        scheduleOutput.printResult();
-        System.out.println(greedy.resultFitness());
     }
 }

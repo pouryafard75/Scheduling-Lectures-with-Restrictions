@@ -5,13 +5,17 @@ import java.util.ArrayList;
  */
 public class TimePart {
 
-    public static final int PARTS_PER_DAY = 4;
+    static final int PARTS_PER_DAY = 4;
     private int day;
     private int part;
     private ArrayList<Lecture> lectures;
     void addLecture(Lecture l)
     {
         lectures.add(l);
+    }
+    void clearLectures()
+    {
+        lectures.clear();
     }
     ArrayList<Lecture> getLectures() {
         return new ArrayList<>(lectures);

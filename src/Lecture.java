@@ -64,7 +64,7 @@ public class Lecture {
     String fileformat()
     {
         return name + "\n" +
-                name + supervisor.getName() + "\n" +
+                supervisor.getName() + "\n" +
                 Subject.fileFormatSubjectList(subjects);
     }
     void clearReferees()
