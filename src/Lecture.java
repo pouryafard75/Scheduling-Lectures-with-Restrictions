@@ -67,4 +67,8 @@ public class Lecture {
                 name + supervisor.getName() + "\n" +
                 Subject.fileFormatSubjectList(subjects);
     }
+    void clearReferees()
+    {
+        referees.clear();
+    }
 }

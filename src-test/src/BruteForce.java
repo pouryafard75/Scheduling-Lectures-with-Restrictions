@@ -1,3 +1,5 @@
+import java.util.*;
+
 class BruteForce extends Schedule {
 
     BruteForce(ScheduleInput scheduleInput) {
@@ -6,6 +8,6 @@ class BruteForce extends Schedule {
 
     @Override
     ScheduleOutput solve() {
-        return null;
+       return null;
     }
 }

@@ -16,12 +16,9 @@ public class TestDrive {
         }
         Schedule greedy = new GreedyAlgorithm(scheduleInput);
         ScheduleOutput scheduleOutput = greedy.solve();
-
-
+        Validator validator = new Validator(scheduleOutput);
+        System.out.println(validator.checkValidation());
         scheduleOutput.printResult();
         System.out.println(greedy.resultFitness());
-
-
-
     }
 }

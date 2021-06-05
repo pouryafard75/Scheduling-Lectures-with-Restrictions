@@ -11,6 +11,11 @@ class ScheduleOutput {
     {
         this.parts = tp;
     }
+
+    public ArrayList<TimePart> getParts() {
+        return parts;
+    }
+
     private String resultInfo() {
         StringBuilder result = new StringBuilder();
         for (TimePart tp :parts) {
