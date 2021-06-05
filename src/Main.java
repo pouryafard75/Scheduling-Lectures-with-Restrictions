@@ -14,7 +14,7 @@ public class Main {
         System.out.println(validator.checkValidation());
         output.printResult();
         output.writeToFile("Output.txt");
-        output.exportExcel("ScheduleAlgorithm.xls");
+        output.exportExcel("Schedule.xls");
     }
 }
 
