@@ -23,17 +23,19 @@ public class TestDrive {
             Assert.assertTrue(validator.checkValidation());
             curTest ++;
         }
-        // Accuracy test
-        String TEACHERS_FILE_ADDR = "Teachers-AccuracyTest.txt";
-        String SUBJECTS_FILE_ADDR = "Subjects-AccuracyTest.txt";
-        String LECTURES_FILE_ADDR = "Lectures-AccuracyTest.txt";
+
+        // Test the accuracy with the Given inputs
+        String prefix = "Given-";
+        String TEACHERS_FILE_ADDR = "Teachers.txt";
+        String SUBJECTS_FILE_ADDR = "Subjects.txt";
+        String LECTURES_FILE_ADDR = "Lectures.txt";
         final int ExpectedResultCost = 2 * TimePart.PARTS_PER_DAY;
-        ScheduleInput accuracy_input = new ScheduleInput(TEACHERS_FILE_ADDR,SUBJECTS_FILE_ADDR,LECTURES_FILE_ADDR);
-        Schedule schedule = new GreedyAlgorithm(accuracy_input);
-        ScheduleOutput accuracy_output = schedule.solve();
-        Assert.assertTrue(new Validator(accuracy_output).checkValidation());
+        ScheduleInput GivenInput = new ScheduleInput(prefix + TEACHERS_FILE_ADDR
+                ,prefix + SUBJECTS_FILE_ADDR,prefix + LECTURES_FILE_ADDR);
+        Schedule schedule = new GreedyAlgorithm(GivenInput);
+        ScheduleOutput output_for_given_inputs = schedule.solve();
+        Assert.assertTrue(new Validator(output_for_given_inputs).checkValidation());
         Assert.assertTrue(schedule.resultFitness() <= ExpectedResultCost);
         System.out.println("Cost of the algorithm : " + schedule.resultFitness()  + " <= " + ExpectedResultCost +  " (Expected)");
-
     }
 }

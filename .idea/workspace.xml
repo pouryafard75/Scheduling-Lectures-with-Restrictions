@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Removing unnecessary parts">
+    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Removing unnecessary imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-test/src/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-test/src/TestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/TestDrive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-test/src/TestUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/TestUnit.java" afterDir="false" />
     </list>
     <ignored path="AiCa3A 2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +57,7 @@
     <session id="-660825003">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -74,14 +72,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="30564" />
-          <entry key="txt" value="2443" />
+          <entry key="java" value="30565" />
+          <entry key="txt" value="2450" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="30564" />
-          <entry key="PLAIN_TEXT" value="2455" />
+          <entry key="JAVA" value="30565" />
+          <entry key="PLAIN_TEXT" value="2462" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,7 +87,7 @@
           <entry key="LICENSE" value="1" />
           <entry key="class" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="292" />
+          <entry key="java" value="293" />
           <entry key="md" value="4" />
           <entry key="php" value="2" />
           <entry key="txt" value="49" />
@@ -99,7 +97,7 @@
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="292" />
+          <entry key="JAVA" value="293" />
           <entry key="Markdown" value="4" />
           <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="50" />
@@ -112,33 +110,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src-test/src/TestDrive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src-test/src/TestUnit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src-test/src/BruteForce.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="450">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
               <folding>
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#576#577#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,8 +198,8 @@
         <option value="$PROJECT_DIR$/src/Schedule.java" />
         <option value="$PROJECT_DIR$/src-test/src/result.txt" />
         <option value="$PROJECT_DIR$/src-test/src/BruteForce.java" />
-        <option value="$PROJECT_DIR$/src-test/src/TestDrive.java" />
         <option value="$PROJECT_DIR$/src-test/src/TestUnit.java" />
+        <option value="$PROJECT_DIR$/src-test/src/TestDrive.java" />
       </list>
     </option>
   </component>
@@ -281,7 +259,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622946129881" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1622947066982" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -570,7 +548,7 @@
       <workItem from="1622759571294" duration="9114000" />
       <workItem from="1622806444567" duration="692000" />
       <workItem from="1622899708344" duration="37417000" />
-      <workItem from="1622944917608" duration="1209000" />
+      <workItem from="1622944917608" duration="1267000" />
     </task>
     <task id="LOCAL-00001" summary="Change public accesses to private, adding getter , small renames">
       <created>1622478746286</created>
@@ -873,17 +851,24 @@
       <option name="project" value="LOCAL" />
       <updated>1622946046938</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Removing unnecessary imports">
+      <created>1622946142774</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1622946142774</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98712000" />
+    <option name="totallyTimeSpent" value="98770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="25" width="1280" height="775" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -892,7 +877,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496875" visible="true" weight="0.41654357" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496875" weight="0.41654357" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988183" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -977,11 +962,11 @@
     <MESSAGE value="Removing some small errors and checking result with validator (100% working with no errors)" />
     <MESSAGE value="Adding comments" />
     <MESSAGE value="Adding testDrive results." />
-    <MESSAGE value="Removing unnecessary imports" />
     <MESSAGE value="Adding assert line" />
     <MESSAGE value="Adding given input and expected output" />
     <MESSAGE value="Removing unnecessary parts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing unnecessary parts" />
+    <MESSAGE value="Removing unnecessary imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing unnecessary imports" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1203,6 +1188,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/src/TestUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src-test/src/BruteForce.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1217,15 +1212,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src-test/src/TestDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/src/TestUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="450">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
