@@ -1,5 +1,7 @@
+import org.junit.Assert;
 import org.junit.Test;
 import java.util.Random;
+
 
 public class TestDrive {
     @Test
@@ -17,6 +19,7 @@ public class TestDrive {
             Schedule schedule = new GreedyAlgorithm(test.populate());
             Validator validator = new Validator(schedule.solve());
             System.out.println("Validtor : " + validator.checkValidation());
+            Assert.assertTrue(validator.checkValidation());
             curTest ++;
         }
     }
