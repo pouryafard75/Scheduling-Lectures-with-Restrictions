@@ -32,7 +32,7 @@ class GreedyAlgorithm extends Schedule {
         {
             ArrayList<Lecture> notAssigned = unAssignedLectures();
             if (notAssigned.isEmpty()) {
-                System.out.println("Problem Solved");
+                System.out.println("Greedy : Problem Solved");
                 break;
             }
             PriorityQueue<Teacher> teachers_queue = new PriorityQueue<>(Comparator.comparingInt(Teacher::getSubjectsSize));

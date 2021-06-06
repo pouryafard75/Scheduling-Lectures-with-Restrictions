@@ -16,7 +16,7 @@ public class TestDrive {
             TestUnit test = new TestUnit(sub_count,teach_count ,  lect_count);
             Schedule schedule = new GreedyAlgorithm(test.populate());
             Validator validator = new Validator(schedule.solve());
-            System.out.println(validator.checkValidation());
+            System.out.println("Validtor : " + validator.checkValidation());
             curTest ++;
         }
     }
