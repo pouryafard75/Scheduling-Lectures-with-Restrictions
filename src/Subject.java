@@ -1,5 +1,5 @@
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -10,7 +10,7 @@ public class Subject {
     private String name;
     public Subject(String name) {
         this.name = name;
-        teachers = new HashSet<>();
+        teachers = new LinkedHashSet<>();
     }
     String getName()
     {

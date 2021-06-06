@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by pouryafard on 1/15/2017 AD.
@@ -16,10 +13,10 @@ public class Lecture {
         this.name = name;
         this.supervisor = supervisor;
         referees = new ArrayList<>();
-        subjects = new HashSet<>();
+        subjects = new LinkedHashSet<>();
     }
     Set<Subject> getSubjects() {
-        return new HashSet<>(subjects);
+        return new LinkedHashSet<>(subjects);
     }
     void addSubject(Subject s)
     {

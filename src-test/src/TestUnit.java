@@ -90,7 +90,7 @@ class TestUnit {
         return list.get(index);
     }
     private Set<Teacher> ExpertTeachersOnSubject(Subject subject){
-        Set<Teacher> experts= new HashSet<>();
+        Set<Teacher> experts= new LinkedHashSet<>();
         for (Teacher teacher : teachers) {
             if (teacher.isExpertInSubject(subject)) experts.add(teacher);
         }

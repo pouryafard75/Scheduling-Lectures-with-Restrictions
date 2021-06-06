@@ -57,14 +57,14 @@ public abstract class Schedule {
         return unassigned;
     }
     Set<Teacher> findExperts(Subject sub, Set<Teacher> possibleTeachers) {
-        Set<Teacher> result = new HashSet<>();
+        Set<Teacher> result = new LinkedHashSet<>();
         for (Teacher t: possibleTeachers)
             if (t.isExpertInSubject(sub)) result.add(t);
         return result;
     }
     Set<Teacher> calculateCurrentBusyTeachers() {
         TimePart last = getLastTimePart();
-        Set<Teacher> busyTeachers = new HashSet<>();
+        Set<Teacher> busyTeachers = new LinkedHashSet<>();
         if (last.getLectures() == null) return busyTeachers;
         ArrayList<Lecture> curLectures = last.getLectures();
         for (Lecture lec: curLectures) {
@@ -74,7 +74,7 @@ public abstract class Schedule {
         return busyTeachers;
     }
     Set<Teacher> calculateCurrentFreeTeachers() {
-        Set<Teacher> freeTeachers = new HashSet<>();
+        Set<Teacher> freeTeachers = new LinkedHashSet<>();
         Set<Teacher> busyTeachers = calculateCurrentBusyTeachers();
         for (Teacher teacher : teachers) {
             if (!busyTeachers.contains(teacher)) freeTeachers.add(teacher);

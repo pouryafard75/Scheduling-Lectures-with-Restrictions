@@ -1,5 +1,5 @@
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -10,7 +10,7 @@ class Teacher {
     private String name;
     Teacher(String name) {
         this.name = name;
-        subjects = new HashSet<>();
+        subjects = new LinkedHashSet<>();
     }
     boolean isExpertInSubject(Subject s)
     {
@@ -21,7 +21,7 @@ class Teacher {
         return name;
     }
     Set<Subject> getSubjects() {
-        return new HashSet<>(subjects);
+        return new LinkedHashSet<>(subjects);
     }
     int getSubjectsSize()
     {
