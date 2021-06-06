@@ -18,3 +18,5 @@ Greedy : Problem Solved
 Validtor : true
 Greedy : Problem Solved
 Validtor : true
+Greedy : Problem Solved
+Cost of the algorithm : 7 <= 8 (Expected)

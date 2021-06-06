@@ -65,6 +65,7 @@ public abstract class Schedule {
     Set<Teacher> calculateCurrentBusyTeachers() {
         TimePart last = getLastTimePart();
         Set<Teacher> busyTeachers = new HashSet<>();
+        if (last.getLectures() == null) return busyTeachers;
         ArrayList<Lecture> curLectures = last.getLectures();
         for (Lecture lec: curLectures) {
             busyTeachers.add(lec.getSupervisor());

@@ -36,8 +36,11 @@ class TestUnit {
     private void populateSubjects()
     {
         while(subjects.size() < subcount)
+        {
             subjects.add(new Subject(randomString(SUBJECT_MAX_STRING_LENGTH)));
+        }
     }
+
     private void populateTeachers()
     {
         while(teachers.size() < teacherscount)
