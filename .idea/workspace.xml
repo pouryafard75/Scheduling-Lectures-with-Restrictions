@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="Uplooading outputs..">
-      <change afterPath="$PROJECT_DIR$/src-test/src/JUnitProgram.java" afterDir="false" />
+    <list default="true" id="41dfe798-70c8-4655-a62f-385d796cbaf7" name="Default" comment="ReAdding validation test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Given-Lectures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/Given-Lectures.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Given-Subjects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/Given-Subjects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Given-Teachers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/Given-Teachers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-test/src/TestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/TestDrive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-test/src/TestUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/InputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-test/src/JUnitProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src-test/src/JUnitProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-test/src/TestDrive.java" beforeDir="false" />
     </list>
     <ignored path="AiCa3A 2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,6 +14,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Scheduling_Lectures_with_Restrictions$JUnitProgram_test.ic" NAME="JUnitProgram.test Coverage Results" MODIFIED="1623056996479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -62,40 +61,40 @@
     <session id="-660825003">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="java" value="33423" />
-          <entry key="txt" value="2605" />
+          <entry key="java" value="33571" />
+          <entry key="txt" value="2658" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="33423" />
-          <entry key="PLAIN_TEXT" value="2638" />
+          <entry key="JAVA" value="33571" />
+          <entry key="PLAIN_TEXT" value="2691" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="class" value="3" />
+          <entry key="class" value="4" />
           <entry key="iml" value="1" />
-          <entry key="java" value="353" />
+          <entry key="java" value="356" />
           <entry key="md" value="4" />
           <entry key="php" value="2" />
           <entry key="txt" value="56" />
@@ -103,9 +102,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="3" />
+          <entry key="CLASS" value="4" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="353" />
+          <entry key="JAVA" value="356" />
           <entry key="Markdown" value="4" />
           <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="57" />
@@ -121,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src-test/src/JUnitProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="268">
+              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,10 +130,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
+        <entry file="file://$PROJECT_DIR$/src-test/src/InputGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
-              <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
+            <state relative-caret-position="1050">
+              <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,11 +220,16 @@
         <option value="$PROJECT_DIR$/src-test/src/test.java" />
         <option value="$PROJECT_DIR$/src-test/src/BruteForce.java" />
         <option value="$PROJECT_DIR$/src-test/src/InputGenerator.java" />
-        <option value="$PROJECT_DIR$/src-test/src/TestDrive.java" />
         <option value="$PROJECT_DIR$/src/ScheduleInput.java" />
+        <option value="$PROJECT_DIR$/src-test/src/TestDrive.java" />
         <option value="$PROJECT_DIR$/src-test/src/JUnitProgram.java" />
       </list>
     </option>
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="JUnitProgram.test" />
+    </enabled-run-configurations>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -243,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,8 +279,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +287,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1623056113152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1623057556636" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -311,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JUnitProgram.test">
+  <component name="RunManager" selected="Application.TestDrive">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -557,17 +564,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.JUnitProgram.test" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.temp" />
       <item itemvalue="Application.TestDrive" />
       <item itemvalue="Application.test" />
-      <item itemvalue="JUnit.JUnitProgram.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestDrive" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.TestDrive" />
         <item itemvalue="Application.temp" />
       </list>
     </recent_temporary>
@@ -600,7 +607,8 @@
       <workItem from="1622946875935" duration="450000" />
       <workItem from="1622973609782" duration="5314000" />
       <workItem from="1622979706323" duration="3252000" />
-      <workItem from="1622983677973" duration="2078000" />
+      <workItem from="1622983677973" duration="2988000" />
+      <workItem from="1623057233051" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="Change public accesses to private, adding getter , small renames">
       <created>1622478746286</created>
@@ -938,46 +946,56 @@
       <option name="project" value="LOCAL" />
       <updated>1622982886611</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Adding junit test">
+      <created>1623056152478</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1623056152479</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 17m 49s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 18m 10s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 19m 30s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 20m 40s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 20m 48s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 22m 14s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 22m 39s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 24m 26s.xml">
-      <configuration name="JUnitProgram.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 24m 45s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 25m 15s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 27m 45s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 29m 20s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 30m 52s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 38m 39s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 39m 59s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 40m 42s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 40m 47s.xml">
+      <configuration name="JUnitProgram.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitProgram_test - 2021.06.07 at 13h 48m 15s.xml">
       <configuration name="JUnitProgram.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109864000" />
+    <option name="totallyTimeSpent" value="111097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="775" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3085622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31340873" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -986,7 +1004,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.496875" visible="true" weight="0.41654357" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496875" visible="true" weight="0.41654357" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988183" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1008,6 +1026,7 @@
       <window_info anchor="right" id="Flutter Outline" order="8" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32956383" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
@@ -1050,7 +1069,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small refactorings... (Removing unnecessary imports and functions)" />
     <MESSAGE value="Small improvements" />
     <MESSAGE value="Small improvements (Rename)" />
     <MESSAGE value="Adding filename(s) as parameter" />
@@ -1075,7 +1093,8 @@
     <MESSAGE value="Given Inputs." />
     <MESSAGE value="Replacing HashSets with LinkedHashSets to avoid random ordering." />
     <MESSAGE value="Uplooading outputs.." />
-    <option name="LAST_COMMIT_MESSAGE" value="Uplooading outputs.." />
+    <MESSAGE value="Adding junit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding junit test" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1144,11 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,12 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding>
-            <element signature="e#119#120#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,27 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="622">
           <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/src/InputGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/junit/framework/TestCase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1310,16 +1297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="200" column="6" lean-forward="true" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/src/TestDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1343,17 +1320,37 @@
     <entry file="file://$PROJECT_DIR$/src-test/Given-Lectures.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/junit/framework/TestCase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2262">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
+        <state relative-caret-position="15">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/src/TestDrive.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/src/InputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src-test/src/JUnitProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="268">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

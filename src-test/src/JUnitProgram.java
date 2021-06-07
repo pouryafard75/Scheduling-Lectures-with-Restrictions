@@ -14,16 +14,12 @@ public class JUnitProgram extends TestCase {
         schedule1 = new GreedyAlgorithm(GivenInput);
         maxExpectedResult = 2 * TimePart.PARTS_PER_DAY;
     }
-
     @Override
-    protected void tearDown() {
-
-    }
-
+    protected void tearDown() { }
     @Test
     public void test()
     {
         schedule1.solve();
-        assertTrue(schedule1.resultFitness() < maxExpectedResult);
+        assertTrue(schedule1.resultFitness() <= maxExpectedResult);
     }
 }
