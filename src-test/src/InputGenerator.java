@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-class TestUnit {
+class InputGenerator {
 
     private ArrayList<Lecture> lectures;
     private ArrayList<Teacher> teachers;
@@ -16,7 +16,7 @@ class TestUnit {
     private static final String SUBJECTS_FILE = "Subjects.txt";
     private static final String TEACHERS_FILE = "Teachers.txt";
     private int subcount, teacherscount, leccounts;
-    TestUnit(int subcount , int teacherscount , int leccounts )
+    InputGenerator(int subcount , int teacherscount , int leccounts )
     {
         this.subcount = subcount;
         this.teacherscount = teacherscount;
